@@ -16,3 +16,13 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Cities
+Route::get('/cities', 'CityController@getCities');
+Route::get('/cities/{id}', 'CityController@getCityById')->where(['id' => '[0-9]+']);
+Route::get('/cities/{name}', 'CityController@getCityByName');
+
+// Skills
+Route::get('/skills', 'SkillController@getSkills');
+Route::get('/skills/{id}', 'SkillController@getSkillById')->where(['id' => '[0-9]+']);
+Route::get('/skills/{name}', 'SkillController@getSkillByName');
