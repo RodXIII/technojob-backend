@@ -13,5 +13,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(CitiesSeeder::class);
         $this->call(SkillsSeeder::class);
+        $this->call(WorkersSeeder::class);
     }
 }

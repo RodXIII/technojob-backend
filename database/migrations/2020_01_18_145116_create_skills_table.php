@@ -6,27 +6,27 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateSkillsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('skills', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('skill', 50);
-            $table->string('img', 255)->nullable();
-        });
-    }
+  /**
+   * Run the migrations.
+   *
+   * @return void
+   */
+  public function up()
+  {
+    Schema::create('skills', function (Blueprint $table) {
+      $table->increments('id');
+      $table->string('skill', 50);
+      $table->string('img', 255)->nullable();
+    });
+  }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('skills');
-    }
+  /**
+   * Reverse the migrations.
+   *
+   * @return void
+   */
+  public function down()
+  {
+    Schema::dropIfExists('skills');
+  }
 }
