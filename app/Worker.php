@@ -26,9 +26,14 @@ class Worker extends Model
   {
     return $this->hasOne('App\City');  // take 'id' of cities table
   }
+  // public function jobs()
+  // {
+  //   return $this->hasMany('App\Job_Worker');  //foreign key needed 'worker_id' 
+  // }
   public function jobs()
   {
-    return $this->hasMany('App\Job_Worker');  //foreign key needed 'worker_id' 
+    return $this->belongsToMany('App\Job', 'job_worker')
+    ->withPivot('job_id', 'status');
   }
 }
 
