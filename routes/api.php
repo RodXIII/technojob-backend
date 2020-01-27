@@ -31,6 +31,8 @@ Route::group(['middleware' => ['cors']], function () {
 
   // Acces
   Route::post('/access/register/{usertype}', 'AccessController@register');
+  Route::post('/access/login/{usertype}', 'AccessController@login');
+
 
   
 });
