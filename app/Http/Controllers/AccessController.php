@@ -55,13 +55,13 @@ class AccessController extends Controller
 
       return \Response::json([
         'created' => false,
-        'error' => 'email duplicated '.$e,
+        'error' => 'email duplicated ' . $e,
       ], 500);  // 500 - query error
     }
   }
 
   public function login(Request $request, $usertype)
-  { 
+  {
     try {
 
       // Creamos las reglas de validación
@@ -100,7 +100,7 @@ class AccessController extends Controller
           'data' => [ // información del usuario
             'id' => $user['id'],
             'email' => $user['email'],
-            'usertype'=>$usertype
+            'usertype' => $usertype
           ]
         );
         $user['token'] = JWT::encode($token, $key);
@@ -110,6 +110,40 @@ class AccessController extends Controller
           'error' => 'error',
         ], 400);  // 400 - bad request
       }
+    } catch (QueryException $e) {
+
+      return \Response::json([
+        'created' => false,
+        'error' => 'catch error',
+      ], 500);  // 500 - query error
+    }
+  }
+
+  public function logout(Request $request, $usertype)
+  {
+    try {
+      $token = $_SERVER['HTTP_AUTHORIZATION'];
+      $decode = JWT::decode($token, "misecretito", array('HS256'));
+      $email = $decode->data->email;
+      
+      if ($usertype === 'worker') {
+        $user = Worker::where('email', '=', $email)->get();
+      } else if ($usertype === 'company') {
+        $user = Company::where('email', '=', $email)->get();
+      }
+
+      $userEmail = $request->input('email');
+
+      if ($email = $userEmail){
+        $user[0]->token= null;
+        $user[0]->save();
+      }
+
+      return ($user) ? $user : \Response::json([
+        'logged' => false,
+        'error' => 'error',
+      ], 400);  // 400 - bad request
+
     } catch (QueryException $e) {
 
       return \Response::json([

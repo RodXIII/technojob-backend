@@ -20,7 +20,7 @@ Route::group(['middleware' => ['cors']], function () {
   // });
 
   // Cities
-  Route::get('/cities', 'CityController@getCities')->middleware('token');
+  Route::get('/cities', 'CityController@getCities');
   Route::get('/cities/{id}', 'CityController@getCityById')->where(['id' => '[0-9]+']);
   Route::get('/cities/{name}', 'CityController@getCityByName');
 
@@ -32,6 +32,7 @@ Route::group(['middleware' => ['cors']], function () {
   // Acces
   Route::post('/access/register/{usertype}', 'AccessController@register');
   Route::post('/access/login/{usertype}', 'AccessController@login');
+  Route::patch('/access/logout/{usertype}', 'AccessController@logout')->middleware('token');
 
 
   
