@@ -8,6 +8,7 @@ use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Firebase\JWT\JWT;
 
 class AccessController extends Controller
 {
@@ -54,13 +55,13 @@ class AccessController extends Controller
 
       return \Response::json([
         'created' => false,
-        'error' => 'email duplicated',
+        'error' => 'email duplicated '.$e,
       ], 500);  // 500 - query error
     }
   }
 
   public function login(Request $request, $usertype)
-  {
+  { 
     try {
 
       // Creamos las reglas de validación
@@ -85,19 +86,30 @@ class AccessController extends Controller
 
       if ($usertype === 'worker') {
         $user = Worker::where('email', '=', $email)->first();
-      } else if ($usertype == 'company') {
+      } else if ($usertype === 'company') {
         $user = Company::where('email', '=', $email)->first();
       }
 
       if (Hash::check($password, $user['password'])) {
-        echo 'checked';
-        
+        //echo 'checked';
+        $time = time();
+        $key = 'misecretito';
+        $token = array(
+          'iat' => $time, // Tiempo que inició el token
+          'exp' => $time + (60 * 60 * 72), // Tiempo que expirará el token (+1 hora)
+          'data' => [ // información del usuario
+            'id' => $user['id'],
+            'email' => $user['email'],
+            'usertype'=>$usertype
+          ]
+        );
+        $user['token'] = JWT::encode($token, $key);
+        $user->save();
         return ($user) ? $user : \Response::json([
           'logged' => false,
           'error' => 'error',
         ], 400);  // 400 - bad request
       }
-
     } catch (QueryException $e) {
 
       return \Response::json([
