@@ -29,11 +29,11 @@ class CheckToken
       }
       $decode = JWT::decode($token, "misecretito", array('HS256'));
 
-      $usertype = $decode->data->usertype;
+      $usertypeToken = $decode->data->usertype;
 
-      if ($usertype === 'worker') {
+      if ($usertypeToken === 'worker') {
         $user = Worker::where('token', '=', $token)->first();
-      } else if ($usertype === 'company') {
+      } else if ($usertypeToken === 'company') {
         $user = Company::where('token', '=', $token)->first();
       }
 
@@ -45,7 +45,7 @@ class CheckToken
 
       return $next($request);
       
-    } catch (\Firebase\JWT\ExpiredException $e) {
+    } catch (\Firebase\JWT\Exception $e) {
       echo 'Exception message '.$e ;
       return \Response::json([
         'msg' => 'token no valido'

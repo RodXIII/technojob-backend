@@ -139,7 +139,11 @@ class AccessController extends Controller
         $user[0]->save();
       }
 
-      return ($user) ? $user : \Response::json([
+      return ($user) ? \Response::json([
+        'msg'=>'Logout successfully'
+      ], 200)  // 400 - bad request 
+      :
+       \Response::json([
         'logged' => false,
         'error' => 'error',
       ], 400);  // 400 - bad request
