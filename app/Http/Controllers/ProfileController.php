@@ -9,7 +9,9 @@ use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Hash;
 use Firebase\JWT\JWT;
+
 
 class ProfileController extends Controller
 {
@@ -86,10 +88,6 @@ class ProfileController extends Controller
         $user = Company::where('token', '=', $token)->first();
       }
 
-      // $validate = $this->validate($request,[
-      //   'name' => 'required|string|max:255',
-      //   'email' => 'required|string|email|max:255|unique:users,email,'.$token
-      // ]);
       $rules = [
         'name' => 'required|string|max:255',
         'email' => 'required|string|email|max:255|unique:users,email,' . $token
@@ -111,6 +109,64 @@ class ProfileController extends Controller
       return \Response::json([
         'msg' => 'profile modified'
       ], 200); // 200 - request
+    } catch (QueryException $e) {
+
+      return \Response::json([
+        'created' => false,
+        'error' => 'catch error',
+      ], 500);  // 500 - query error
+    }
+  }
+
+  public function pass(Request $request)
+  {
+    try {
+      $token = $_SERVER['HTTP_AUTHORIZATION'];
+
+      if (empty($token)) {
+        return \Response::json([
+          'msg' => 'no hay token'
+        ], 400); // 400 - bad request
+      }
+      $decode = JWT::decode($token, "misecretito", array('HS256'));
+
+      $usertype = $decode->data->usertype;
+
+      if ($usertype === 'worker') {
+        $user = Worker::where('token', '=', $token)->first();
+      } else if ($usertype === 'company') {
+        $user = Company::where('token', '=', $token)->first();
+      }
+
+      $rules = [
+        'password' => 'required|string|max:255',
+        'newPassword' => 'required|string|max:255',
+
+      ];
+
+      // Ejecutamos el validador, en caso de que falle devolvemos la respuesta
+      $validator = \Validator::make($request->all(), $rules);
+      if ($validator->fails()) {
+
+        return \Response::json([
+          'created' => false,
+          'errors' => $validator->errors()->all(),
+        ], 400); // 400 - bad request
+      }
+
+      $password = $request->input('password');
+      $newPassword = $request->input('newPassword');
+
+      if (Hash::check($password, $user['password'])) {
+
+        $hashed = Hash::make($newPassword, ['rounds' => 10]);
+        $user['password'] = $hashed;
+        $user->save();
+        return ($user) ? $user : \Response::json([
+          'logged' => false,
+          'error' => 'error',
+        ], 400);  // 400 - bad request
+      }
     } catch (QueryException $e) {
 
       return \Response::json([

@@ -39,5 +39,5 @@ Route::group(['middleware' => ['cors']], function () {
   Route::get('/myprofile', 'ProfileController@getMyProfile')->middleware('token');
   Route::get('/profile/{usertype}/{id}', 'ProfileController@getProfile')->middleware('token');
   Route::patch('/myprofile/update', 'ProfileController@update')->middleware('token');
-
+  Route::patch('/myprofile/pass', 'ProfileController@pass')->middleware('token');
 });
