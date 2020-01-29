@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 use Firebase\JWT\JWT;
+use Illuminate\Filesystem\FilesystemManager;
 
 
 class ProfileController extends Controller
@@ -106,6 +107,17 @@ class ProfileController extends Controller
       $input = $request->all();
       $user->fill($input)->save();
 
+      $image = $request->file('url_img');
+      $imgId=$user['id'];
+      $image_name = "$usertype-$imgId";
+      if($image){
+         //Guardamos en la caqrpeta storage(storage/app/users)
+       Storage::disk('users')->put($image_name, File::get($image));
+         //seteo el nombre de la imagen en el objeto
+       $user['url_img']=$image_name;
+       $user->update();
+      }
+      
       return \Response::json([
         'msg' => 'profile modified'
       ], 200); // 200 - request
@@ -117,6 +129,11 @@ class ProfileController extends Controller
       ], 500);  // 500 - query error
     }
   }
+
+  public function getImage($filename){
+        $file = Storage::disk('users')->get($filename);
+        return new Response($file,200);
+    }
 
   public function pass(Request $request)
   {
