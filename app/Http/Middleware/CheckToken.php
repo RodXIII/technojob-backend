@@ -7,6 +7,7 @@ use App\Worker;
 use App\Company;
 use Firebase\JWT\JWT;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\Response;
 
 class CheckToken
 {
