@@ -96,7 +96,7 @@ class AccessController extends Controller
         $key = 'misecretito';
         $token = array(
           'iat' => $time, // Tiempo que inició el token
-          'exp' => $time + (60 * 60 * 72), // Tiempo que expirará el token (+1 hora)
+          'exp' => $time + (60 * 60 * 72), // Tiempo que expirará el token
           'data' => [ // información del usuario
             'id' => $user['id'],
             'email' => $user['email'],
