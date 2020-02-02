@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Worker;
 use App\Company;
+use App\Worker;
+use Firebase\JWT\JWT;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Firebase\JWT\JWT;
 
-class AccessController extends Controller
-{
+class AccessController extends Controller {
 
-  public function register(Request $request, $usertype)
-  {
+  public function register(Request $request, $usertype) {
 
     try {
 
@@ -29,9 +27,10 @@ class AccessController extends Controller
       $validator = \Validator::make($request->all(), $rules);
       if ($validator->fails()) {
 
+        $error = $validator->errors()->all();
         return \Response::json([
           'created' => false,
-          'errors' => $validator->errors()->all(),
+          'message' => $error[0],
         ], 400); // 400 - bad request
       }
       $password = $request->input('password');
@@ -48,20 +47,19 @@ class AccessController extends Controller
 
       return ($user) ? $user : \Response::json([
         'created' => false,
-        'error' => 'usertype invalid',
-      ], 400);  // 400 - bad request
+        'message' => '.. usertype invalid ..',
+      ], 400); // 400 - bad request
 
     } catch (QueryException $e) {
 
       return \Response::json([
         'created' => false,
-        'error' => 'email duplicated ' . $e,
-      ], 500);  // 500 - query error
+        'message' => '.. email duplicated .. ',
+      ], 500); // 500 - query error
     }
   }
 
-  public function login(Request $request, $usertype)
-  {
+  public function login(Request $request, $usertype) {
     try {
 
       // Creamos las reglas de validación
@@ -76,13 +74,12 @@ class AccessController extends Controller
 
         return \Response::json([
           'logged' => false,
-          'errors' => $validator->errors()->all(),
+          'message' => $validator->errors()->all(),
         ], 400); // 400 - bad request
       }
 
       $email = $request->input('email');
       $password = $request->input('password');
-
 
       if ($usertype === 'worker') {
         $user = Worker::where('email', '=', $email)->first();
@@ -91,7 +88,7 @@ class AccessController extends Controller
       }
 
       if (Hash::check($password, $user['password'])) {
-        //echo 'checked';
+
         $time = time();
         $key = 'misecretito';
         $token = array(
@@ -100,32 +97,41 @@ class AccessController extends Controller
           'data' => [ // información del usuario
             'id' => $user['id'],
             'email' => $user['email'],
-            'usertype' => $usertype
-          ]
+            'usertype' => $usertype,
+          ],
         );
         $user['token'] = JWT::encode($token, $key);
         $user->save();
-        return ($user) ? $user : \Response::json([
+
+        return \Response::json([
+          'logged' => true,
+          'message' => '.. login successful ..',
+          'user' => $user
+        ], 200);
+  
+      } else {
+
+        return \Response::json([
           'logged' => false,
-          'error' => 'error',
-        ], 400);  // 400 - bad request
+          'message' => '.. login failed ..',
+        ], 400); // 400 - bad request
       }
+
     } catch (QueryException $e) {
 
       return \Response::json([
         'created' => false,
-        'error' => 'catch error',
-      ], 500);  // 500 - query error
+        'message' => '.. DB error ..',
+      ], 500); // 500 - query error
     }
   }
 
-  public function logout(Request $request, $usertype)
-  {
+  public function logout(Request $request, $usertype) {
     try {
       $token = $_SERVER['HTTP_AUTHORIZATION'];
       $decode = JWT::decode($token, "misecretito", array('HS256'));
       $email = $decode->data->email;
-      
+
       if ($usertype === 'worker') {
         $user = Worker::where('email', '=', $email)->get();
       } else if ($usertype === 'company') {
@@ -134,26 +140,26 @@ class AccessController extends Controller
 
       $userEmail = $request->input('email');
 
-      if ($email = $userEmail){
-        $user[0]->token= null;
+      if ($email == $userEmail) {
+        $user[0]->token = null;
         $user[0]->save();
+
+        return \Response::json([
+          'message'=> '.. logout successful ..'
+        ], 200);
       }
 
-      return ($user) ? \Response::json([
-        'msg'=>'Logout successfully'
-      ], 200)  // 400 - bad request 
-      :
-       \Response::json([
+      return \Response::json([
         'logged' => false,
-        'error' => 'error',
-      ], 400);  // 400 - bad request
+        'message' => '.. logout failed ..',
+      ], 400); // 400 - bad request
 
     } catch (QueryException $e) {
 
       return \Response::json([
         'created' => false,
-        'error' => 'catch error',
-      ], 500);  // 500 - query error
+        'message' => '.. DB error ..',
+      ], 500); // 500 - query error
     }
   }
 }

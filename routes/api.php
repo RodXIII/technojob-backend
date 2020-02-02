@@ -2,22 +2,22 @@
 
 use Illuminate\Http\Request;
 
+/*
+|--------------------------------------------------------------------------
+| API Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register API routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| is assigned the "api" middleware group. Enjoy building your API!
+|
+ */
+
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
 Route::group(['middleware' => ['cors']], function () {
-
-  /*
-  |--------------------------------------------------------------------------
-  | API Routes
-  |--------------------------------------------------------------------------
-  |
-  | Here is where you can register API routes for your application. These
-  | routes are loaded by the RouteServiceProvider within a group which
-  | is assigned the "api" middleware group. Enjoy building your API!
-  |
-   */
-
-  // Route::middleware('auth:api')->get('/user', function (Request $request) {
-  //     return $request->user();
-  // });
 
   // Cities
   Route::get('/cities', 'CityController@getCities');
@@ -29,7 +29,7 @@ Route::group(['middleware' => ['cors']], function () {
   Route::get('/skills/{id}', 'SkillController@getSkillById')->where(['id' => '[0-9]+']);
   Route::get('/skills/{name}', 'SkillController@getSkillByName');
 
-  // Acces
+  // Access
   Route::post('/access/register/{usertype}', 'AccessController@register');
   Route::post('/access/login/{usertype}', 'AccessController@login');
   Route::patch('/access/logout/{usertype}', 'AccessController@logout')->middleware('token');
@@ -44,4 +44,5 @@ Route::group(['middleware' => ['cors']], function () {
   // Jobs
   Route::get('/jobs/{limit?}', 'JobController@getJobs');
   Route::get('/jobs/{limit}/{city}/{type}', 'JobController@getFilteredJobs');
+  
 });
