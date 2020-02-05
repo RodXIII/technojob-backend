@@ -3,19 +3,24 @@
 namespace App\Http\Controllers;
 
 use App\Job;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Validator;
+use Firebase\JWT\JWT;
 
-class JobController extends Controller {
+class JobController extends Controller
+{
   /**
    * responds with all jobs order DESc.
    *
    * accept limit filter
    * -----------------------------------------------*/
-  public function getJobs($limit = 500) {
+  public function getJobs($limit = 500)
+  {
 
     // return Job::all();
-    return Job::
-      orderBy('created_at', 'DESC')
+    return Job::orderBy('created_at', 'DESC')
       ->limit($limit)
       ->get();
   }
@@ -25,7 +30,8 @@ class JobController extends Controller {
    *
    * accept limit, city and type filter
    * -----------------------------------------------*/
-  public function getFilteredJobs($limit, $city, $type) {
+  public function getFilteredJobs($limit, $city, $type)
+  {
     echo "$limit  $city  $type";
 
     $filter = "";
@@ -51,6 +57,60 @@ class JobController extends Controller {
                             $filter", [1]);
 
     return $jobs;
+  }
+
+  /**
+   * add and responds job created
+   *
+   * -----------------------------------------------*/
+  public function createJob(Request $request)
+  {
+
+    try {
+      $token = $_SERVER['HTTP_AUTHORIZATION'];
+
+      if (empty($token)) {
+        return \Response::json([
+          'message' => '.. no token ..',
+        ], 400); // 400 - bad request
+      }
+      $decode = JWT::decode($token, "misecretito", array('HS256'));
+  
+      $usertype = $decode->data->usertype;
+
+      if ($usertype != 'company') {
+        return \Response::json([
+          'message' => '.. usertype invalid ..',
+        ], 400); // 400 - bad request
+      }
+
+      // Creamos las reglas de validación
+      $rules = [
+        'job_name' => 'required',
+        'salary' => 'required',
+        'description' => 'required'
+      ];
+
+      // Ejecutamos el validador, en caso de que falle devolvemos la respuesta
+      $validator = \Validator::make($request->all(), $rules);
+      if ($validator->fails()) {
+
+        $error = $validator->errors()->all();
+        return \Response::json([
+          'created' => false,
+          'message' => $error[0],
+        ], 400); // 400 - bad request
+      }
+
+      return Job::create($request->all());
+
+    } catch (QueryException $e) {
+
+      return \Response::json([
+        'created' => false,
+        'message' => '.. no job ..'.$e,
+      ], 500); // 500 - query error
+    }
   }
 }
 
