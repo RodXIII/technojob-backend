@@ -111,6 +111,7 @@ class ProfileController extends Controller {
       }
 
       return \Response::json([
+        'user'=> $user,
         'message' => '.. profile modified ..',
       ], 200); // 200 - request
     } catch (QueryException $e) {

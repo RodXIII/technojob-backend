@@ -47,5 +47,6 @@ Route::group(['middleware' => ['cors']], function () {
   Route::post('/jobs/add', 'JobController@createJob')->middleware('token');
   Route::patch('/jobs/final/{jobId}', 'JobController@finalizeJob')->middleware('token');
   Route::delete('/jobs/remove/{jobId}', 'JobController@deleteJob')->middleware('token');
+  Route::post('/jobs/subscribe/{jobId}', 'JobController@subscribe')->middleware('token');
 
 });

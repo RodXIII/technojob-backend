@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Job;
 use App\JobWorker;
+use App\Worker;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\QueryException;
@@ -219,6 +220,52 @@ class JobController extends Controller
       ], 500); // 500 - query error
     }
   }
+
+  public function subscribe($jobId)
+  {
+
+    try {
+      $token = $_SERVER['HTTP_AUTHORIZATION'];
+
+      if (empty($token)) {
+        return \Response::json([
+          'message' => '.. no token ..',
+        ], 400); // 400 - bad request
+      }
+      $decode = JWT::decode($token, "misecretito", array('HS256'));
+
+      $usertype = $decode->data->usertype;
+      $id = $decode->data->id;
+
+      if ($usertype != 'worker') {
+        return \Response::json([
+          'message' => '.. usertype invalid ..',
+        ], 400); // 400 - bad request
+      }
+
+      
+      $checkWorker = JobWorker::where(['job_id' => $jobId, 'worker_id' => $id])->first();
+      
+      if ($checkWorker) {
+        return \Response::json([
+          'message' => ".. you can't subscribe two times ..",
+        ], 400); // 400 - bad request
+      }
+      $subscription = JobWorker::create(['job_id' => $jobId, 'worker_id' => $id]);
+      $subscription->save();
+      
+      return \Response::json([
+        'finalized' => true,
+        'message' => '.. subscribed ..',
+      ], 200);
+    } catch (QueryException $e) {
+      
+      return \Response::json([
+        'created' => false,
+        'message' => '.. subscription not done..' . $e,
+      ], 500); // 500 - query error
+    }
+  }
 }
 
 // removeMe
@@ -227,3 +274,7 @@ class JobController extends Controller
 // $jobs = DB::select('SELECT * FROM workers WHERE id = ? AND name = ?', [1, 'camey']);
 // $jobs = DB::select('SELECT * FROM workers WHERE id = :id AND name = :name', ['id' => 1, 'name' => 'camey']);
 //select *, companies.city_id from jobs, companies where jobs.company_id = companies.id and companies.city_id = 13
+
+// $worker = Worker::find($id);
+// $job = Job::find($jobId);
+// $job->workers()->attach($worker->id);

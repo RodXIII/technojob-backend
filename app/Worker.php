@@ -32,7 +32,7 @@ class Worker extends Model
   // }
   public function jobs()
   {
-    return $this->belongsToMany('App\Job', 'job_worker')
+    return $this->belongsToMany('App\Job', 'job_workers')
     ->withPivot('job_id', 'status');
   }
 }
