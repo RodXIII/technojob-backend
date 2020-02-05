@@ -167,6 +167,58 @@ class JobController extends Controller
       ], 500); // 500 - query error
     }
   }
+
+  public function deleteJob($jobId)
+  {
+
+    try {
+      $token = $_SERVER['HTTP_AUTHORIZATION'];
+
+      if (empty($token)) {
+        return \Response::json([
+          'message' => '.. no token ..',
+        ], 400); // 400 - bad request
+      }
+      $decode = JWT::decode($token, "misecretito", array('HS256'));
+
+      $usertype = $decode->data->usertype;
+      $id = $decode->data->id;
+
+      if ($usertype != 'company') {
+        return \Response::json([
+          'message' => '.. usertype invalid ..',
+        ], 400); // 400 - bad request
+      }
+
+      $job = Job::find($jobId);
+
+      if ($id != $job['company_id']) {
+        return \Response::json([
+          'message' => '.. unauthorized ..',
+        ], 400); // 400 - bad request
+      }
+
+
+      $jobworkers = JobWorker::where('job_id', '=', $jobId)->get();
+      foreach ($jobworkers as &$jobworker) {
+
+        $jobworker->delete();
+      }
+
+      $job->delete();
+
+      return \Response::json([
+        'finalized' => true,
+        'message' => '.. job offer deleted ..',
+      ], 200);
+    } catch (QueryException $e) {
+
+      return \Response::json([
+        'created' => false,
+        'message' => '.. job no found..' . $e,
+      ], 500); // 500 - query error
+    }
+  }
 }
 
 // removeMe
