@@ -45,5 +45,5 @@ Route::group(['middleware' => ['cors']], function () {
   Route::get('/jobs/{limit?}', 'JobController@getJobs');
   Route::get('/jobs/{limit}/{city}/{type}', 'JobController@getFilteredJobs');
   Route::post('/jobs/add', 'JobController@createJob')->middleware('token');
-  
+  Route::patch('/jobs/final/{jobId}', 'JobController@finalizeJob')->middleware('token');
 });

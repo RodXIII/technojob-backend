@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Job;
+use App\JobWorker;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\QueryException;
@@ -75,7 +76,7 @@ class JobController extends Controller
         ], 400); // 400 - bad request
       }
       $decode = JWT::decode($token, "misecretito", array('HS256'));
-  
+
       $usertype = $decode->data->usertype;
 
       if ($usertype != 'company') {
@@ -103,12 +104,66 @@ class JobController extends Controller
       }
 
       return Job::create($request->all());
-
     } catch (QueryException $e) {
 
       return \Response::json([
         'created' => false,
-        'message' => '.. no job ..'.$e,
+        'message' => '.. no job ..' . $e,
+      ], 500); // 500 - query error
+    }
+  }
+
+  public function finalizeJob($jobId)
+  {
+
+    try {
+      $token = $_SERVER['HTTP_AUTHORIZATION'];
+
+      if (empty($token)) {
+        return \Response::json([
+          'message' => '.. no token ..',
+        ], 400); // 400 - bad request
+      }
+      $decode = JWT::decode($token, "misecretito", array('HS256'));
+
+      $usertype = $decode->data->usertype;
+      $id = $decode->data->id;
+
+      if ($usertype != 'company') {
+        return \Response::json([
+          'message' => '.. usertype invalid ..',
+        ], 400); // 400 - bad request
+      }
+
+      $job = Job::find($jobId);
+
+      if ($id != $job['company_id']) {
+        return \Response::json([
+          'message' => '.. unauthorized ..',
+        ], 400); // 400 - bad request
+      }
+
+      $job['active'] = false;
+      $job->update();
+
+      $jobworkers = JobWorker::where('job_id', '=', $jobId)->get();
+      foreach ($jobworkers as &$jobworker) {
+        if ($jobworker['status'] != 2) {
+          $jobworker['status'] = 0;
+          $jobworker->update();
+        }
+      }
+
+
+      return \Response::json([
+        'finalized' => true,
+        'message' => '.. job offer finalized ..',
+      ], 200);
+    } catch (QueryException $e) {
+
+      return \Response::json([
+        'created' => false,
+        'message' => '.. job no found..' . $e,
       ], 500); // 500 - query error
     }
   }
