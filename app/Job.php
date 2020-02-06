@@ -24,7 +24,7 @@ class Job extends Model
   // }
   public function workers()
   {
-    return $this->belongsToMany('App\Worker', 'job_worker')
+    return $this->belongsToMany('App\Worker', 'job_workers')
     ->withPivot('worker_id', 'status');
   }
 }

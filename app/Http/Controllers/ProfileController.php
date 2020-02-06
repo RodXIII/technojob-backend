@@ -36,9 +36,9 @@ class ProfileController extends Controller {
     $usertype = $decode->data->usertype;
 
     if ($usertype === 'worker') {
-      $user = Worker::where('token', '=', $token)->first();
+      $user = Worker::with('jobs')->where('token', '=', $token)->first();
     } else if ($usertype === 'company') {
-      $user = Company::where('token', '=', $token)->first();
+      $user = Company::with('jobs')->where('token', '=', $token)->first();
     }
 
     return ($user) ? $user : \Response::json([
@@ -49,10 +49,11 @@ class ProfileController extends Controller {
   }
 
   public function getProfile($usertype, $id) {
+    
     if ($usertype === 'worker') {
-      $user = Worker::where('id', '=', $id)->first();
+      $user = Worker::with('jobs')->where('id', '=', $id)->first();
     } else if ($usertype === 'company') {
-      $user = Company::where('id', '=', $id)->first();
+      $user = Company::with('jobs')->where('id', '=', $id)->first();
     }
 
     return ($user) ? $user : \Response::json([
@@ -111,6 +112,7 @@ class ProfileController extends Controller {
       }
 
       return \Response::json([
+        'user'=> $user,
         'message' => '.. profile modified ..',
       ], 200); // 200 - request
     } catch (QueryException $e) {
