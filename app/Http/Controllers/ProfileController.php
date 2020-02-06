@@ -49,7 +49,7 @@ class ProfileController extends Controller {
   }
 
   public function getProfile($usertype, $id) {
-    
+
     if ($usertype === 'worker') {
       $user = Worker::with('jobs')->where('id', '=', $id)->first();
     } else if ($usertype === 'company') {
@@ -112,7 +112,7 @@ class ProfileController extends Controller {
       }
 
       return \Response::json([
-        'user'=> $user,
+        'user' => $user,
         'message' => '.. profile modified ..',
       ], 200); // 200 - request
     } catch (QueryException $e) {
@@ -151,7 +151,6 @@ class ProfileController extends Controller {
       $rules = [
         'password' => 'required|string|max:255',
         'newPassword' => 'required|string|max:255',
-
       ];
 
       // Ejecutamos el validador, en caso de que falle devolvemos la respuesta
@@ -159,8 +158,7 @@ class ProfileController extends Controller {
       if ($validator->fails()) {
 
         return \Response::json([
-          'created' => false,
-          'message' => $validator->errors()->all(),
+          'message' => $validator->errors()->all()
         ], 400); // 400 - bad request
       }
 
@@ -172,15 +170,20 @@ class ProfileController extends Controller {
         $hashed = Hash::make($newPassword, ['rounds' => 10]);
         $user['password'] = $hashed;
         $user->save();
-        return ($user) ? $user : \Response::json([
-          'logged' => false,
-          'message' => '.. error ..',
-        ], 400); // 400 - bad request
+
+        return \Response::json([
+          'user' => $user,
+          'message' => '.. change successful ..'
+        ], 200); // 200 - change successful
       }
+
+      return \Response::json([
+        'message' => '.. change fail ..',
+      ], 400); // 400 - bad request
+
     } catch (QueryException $e) {
 
       return \Response::json([
-        'created' => false,
         'message' => '.. DB error ..',
       ], 500); // 500 - query error
     }
