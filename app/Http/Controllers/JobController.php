@@ -114,6 +114,11 @@ class JobController extends Controller
     }
   }
 
+  /**
+   * set job.active value to false
+   * 
+   * set workers status subscribed (not accepted) to 0 
+   * -----------------------------------------------*/
   public function finalizeJob($jobId)
   {
 
@@ -169,6 +174,60 @@ class JobController extends Controller
     }
   }
 
+  /**
+   * worker subscribes to a job
+   * 
+   * -----------------------------------------------*/
+  public function subscribe($jobId)
+  {
+
+    try {
+      $token = $_SERVER['HTTP_AUTHORIZATION'];
+
+      if (empty($token)) {
+        return \Response::json([
+          'message' => '.. no token ..',
+        ], 400); // 400 - bad request
+      }
+      $decode = JWT::decode($token, "misecretito", array('HS256'));
+
+      $usertype = $decode->data->usertype;
+      $id = $decode->data->id;
+
+      if ($usertype != 'worker') {
+        return \Response::json([
+          'message' => '.. usertype invalid ..',
+        ], 400); // 400 - bad request
+      }
+
+
+      $checkWorker = JobWorker::where(['job_id' => $jobId, 'worker_id' => $id])->first();
+
+      if ($checkWorker) {
+        return \Response::json([
+          'message' => ".. you can't subscribe two times ..",
+        ], 400); // 400 - bad request
+      }
+      $subscription = JobWorker::create(['job_id' => $jobId, 'worker_id' => $id]);
+      $subscription->save();
+
+      return \Response::json([
+        'finalized' => true,
+        'message' => '.. subscribed ..',
+      ], 200);
+    } catch (QueryException $e) {
+
+      return \Response::json([
+        'created' => false,
+        'message' => '.. subscription not done..' . $e,
+      ], 500); // 500 - query error
+    }
+  }
+
+  /**
+   * delete job and its subscriptors
+   *
+   * -----------------------------------------------*/
   public function deleteJob($jobId)
   {
 
@@ -217,52 +276,6 @@ class JobController extends Controller
       return \Response::json([
         'created' => false,
         'message' => '.. job no found..' . $e,
-      ], 500); // 500 - query error
-    }
-  }
-
-  public function subscribe($jobId)
-  {
-
-    try {
-      $token = $_SERVER['HTTP_AUTHORIZATION'];
-
-      if (empty($token)) {
-        return \Response::json([
-          'message' => '.. no token ..',
-        ], 400); // 400 - bad request
-      }
-      $decode = JWT::decode($token, "misecretito", array('HS256'));
-
-      $usertype = $decode->data->usertype;
-      $id = $decode->data->id;
-
-      if ($usertype != 'worker') {
-        return \Response::json([
-          'message' => '.. usertype invalid ..',
-        ], 400); // 400 - bad request
-      }
-
-      
-      $checkWorker = JobWorker::where(['job_id' => $jobId, 'worker_id' => $id])->first();
-      
-      if ($checkWorker) {
-        return \Response::json([
-          'message' => ".. you can't subscribe two times ..",
-        ], 400); // 400 - bad request
-      }
-      $subscription = JobWorker::create(['job_id' => $jobId, 'worker_id' => $id]);
-      $subscription->save();
-      
-      return \Response::json([
-        'finalized' => true,
-        'message' => '.. subscribed ..',
-      ], 200);
-    } catch (QueryException $e) {
-      
-      return \Response::json([
-        'created' => false,
-        'message' => '.. subscription not done..' . $e,
       ], 500); // 500 - query error
     }
   }
