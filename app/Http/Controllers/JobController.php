@@ -22,7 +22,23 @@ class JobController extends Controller
   {
 
     // return Job::all();
-    return Job::orderBy('created_at', 'DESC')
+    return Job::with('workers')->orderBy('created_at', 'DESC')
+      ->limit($limit)
+      ->get();
+  }
+
+  /**
+   * responds with all jobs order TOP.
+   *
+   * accept limit filter
+   * -----------------------------------------------*/
+  public function getTopJobs($limit = 500)
+  {
+
+    // return Job::all();
+    return Job::with('workers')
+      ->withCount('workers')
+      ->orderBy('workers_count', 'desc')
       ->limit($limit)
       ->get();
   }
@@ -32,7 +48,7 @@ class JobController extends Controller
    *
    * accept limit, city and type filter
    * -----------------------------------------------*/
-  public function getFilteredJobs($limit, $city, $type)
+  public function getFilteredJobs($limit, $city, $type)  //TODO 
   {
     echo "$limit  $city  $type";
 

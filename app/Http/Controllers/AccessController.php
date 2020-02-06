@@ -10,9 +10,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
-class AccessController extends Controller {
+class AccessController extends Controller
+{
 
-  public function register(Request $request, $usertype) {
+  public function register(Request $request, $usertype)
+  {
 
     try {
 
@@ -59,7 +61,8 @@ class AccessController extends Controller {
     }
   }
 
-  public function login(Request $request, $usertype) {
+  public function login(Request $request, $usertype)
+  {
     try {
 
       // Creamos las reglas de validación
@@ -108,7 +111,6 @@ class AccessController extends Controller {
           'message' => '.. login successful ..',
           'user' => $user
         ], 200);
-  
       } else {
 
         return \Response::json([
@@ -116,7 +118,6 @@ class AccessController extends Controller {
           'message' => '.. login failed ..',
         ], 400); // 400 - bad request
       }
-
     } catch (QueryException $e) {
 
       return \Response::json([
@@ -126,7 +127,8 @@ class AccessController extends Controller {
     }
   }
 
-  public function logout(Request $request, $usertype) {
+  public function logout(Request $request, $usertype)
+  {
     try {
       $token = $_SERVER['HTTP_AUTHORIZATION'];
       $decode = JWT::decode($token, "misecretito", array('HS256'));
@@ -145,7 +147,7 @@ class AccessController extends Controller {
         $user[0]->save();
 
         return \Response::json([
-          'message'=> '.. logout successful ..'
+          'message' => '.. logout successful ..'
         ], 200);
       }
 
