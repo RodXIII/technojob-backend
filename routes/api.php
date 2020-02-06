@@ -42,6 +42,7 @@ Route::group(['middleware' => ['cors']], function () {
   Route::patch('/myprofile/pass', 'ProfileController@pass')->middleware('token');
 
   // Jobs
+  Route::get('/jobs/search', 'JobController@searchJob');
   Route::get('/jobs/top/{limit?}', 'JobController@getTopJobs');
   Route::get('/jobs/{limit?}', 'JobController@getJobs');
   Route::get('/jobs/{limit}/{city}/{type}', 'JobController@getFilteredJobs');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Job;
 use App\JobWorker;
+use App\Company;
 use App\Worker;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -28,7 +29,7 @@ class JobController extends Controller
   }
 
   /**
-   * responds with all jobs order TOP.
+   * responds with all jobs order TOP (number of workers).
    *
    * accept limit filter
    * -----------------------------------------------*/
@@ -75,6 +76,61 @@ class JobController extends Controller
                             $filter", [1]);
 
     return $jobs;
+  }
+
+  public function searchJob(Request $request)
+  {
+
+    try {
+      $token = $_SERVER['HTTP_AUTHORIZATION'];
+
+      if (empty($token)) {
+        return \Response::json([
+          'message' => '.. no token ..',
+        ], 400); // 400 - bad request
+      }
+      $decode = JWT::decode($token, "misecretito", array('HS256'));
+
+      $usertype = $decode->data->usertype;
+
+      if ($usertype != 'worker') {
+        return \Response::json([
+          'message' => '.. usertype invalid ..',
+        ], 400); // 400 - bad request
+      }
+
+      $type = $request->input('type');
+      $words = explode(" ", $type);
+      $results=[];
+      //FOREACH
+      foreach ($words as &$word) {
+
+        $company = Company::where('name', 'LIKE', '%' . $word . '%')->get();
+        $companyId = 0;
+        if (count($company) === 1) {
+          $companyId = $company[0]->id;
+        }
+        $jobs = Job::where('job_name', 'LIKE', '%' . $word . '%')
+          ->orWhere('requirements', 'LIKE', '%' . $word . '%')
+          ->orWhere('company_id', 'LIKE', $companyId)
+          ->orWhere('description', 'LIKE', '%' . $word . '%')
+          ->orderBy('created_at', 'DESC')
+          ->get();
+
+          foreach ($jobs as &$job) {
+            (array_push($results, $job));
+          }
+      }
+
+      return array_values(array_unique($results));
+      
+    } catch (QueryException $e) {
+
+      return \Response::json([
+        'created' => false,
+        'message' => '.. no jobs ..' . $e,
+      ], 500); // 500 - query error
+    }
   }
 
   /**
