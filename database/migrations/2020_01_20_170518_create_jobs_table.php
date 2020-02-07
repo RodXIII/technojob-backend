@@ -18,7 +18,7 @@ class CreateJobsTable extends Migration
             $table->string('job_name', 100);
             $table->string('salary', 50);
             $table->string('requirements', 255)->nullable();
-            $table->string('description', 555)->nullable();
+            $table->string('job_description', 555)->nullable();
             $table->timestamps();
             $table->bigInteger('company_id')->unsigned();
             $table->foreign('company_id')->references('id')->on('companies');

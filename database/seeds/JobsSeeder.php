@@ -19,7 +19,7 @@ class JobsSeeder extends Seeder
     foreach ($data as $obj) {
       Job::create(array(
         'job_name' => $obj->job_name,
-        'description' => $obj->description,
+        'job_description' => $obj->job_description,
         'salary' => $obj->salary,
         'company_id' => $obj->company_id,
       ));

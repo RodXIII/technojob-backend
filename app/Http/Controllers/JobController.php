@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Job;
 use App\JobWorker;
+use App\Company;
 use App\Worker;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -22,9 +23,26 @@ class JobController extends Controller
   {
 
     // return Job::all();
-    return Job::orderBy('created_at', 'DESC')
+    return Job::with('workers')->orderBy('created_at', 'DESC')
       ->limit($limit)
       ->get();
+  }
+
+  /**
+   * responds with all jobs order TOP (number of workers).
+   *
+   * accept limit filter
+   * -----------------------------------------------*/
+  public function getTopJobs($limit = 500)
+  {
+    // return Job::all();
+    $jobs = Job::with('workers', 'company')
+      ->withCount('workers')
+      ->orderBy('workers_count', 'desc')
+      ->limit($limit)
+      ->get();
+
+    return $jobs;
   }
 
   /**
@@ -32,7 +50,7 @@ class JobController extends Controller
    *
    * accept limit, city and type filter
    * -----------------------------------------------*/
-  public function getFilteredJobs($limit, $city, $type)
+  public function getFilteredJobs($limit, $city, $type)  //TODO 
   {
     echo "$limit  $city  $type";
 
@@ -59,6 +77,71 @@ class JobController extends Controller
                             $filter", [1]);
 
     return $jobs;
+  }
+
+  public function searchJob(Request $request)
+  {
+
+    try {
+      $token = $_SERVER['HTTP_AUTHORIZATION'];
+
+      if (empty($token)) {
+        return \Response::json([
+          'message' => '.. no token ..',
+        ], 400); // 400 - bad request
+      }
+      $decode = JWT::decode($token, "misecretito", array('HS256'));
+
+      $usertype = $decode->data->usertype;
+
+      if ($usertype != 'worker') {
+        return \Response::json([
+          'message' => '.. usertype invalid ..',
+        ], 400); // 400 - bad request
+      }
+
+      $type = $request->input('input');
+      //$type = $request->input('input');
+      $city = $request->input('city');
+      //$types = explode(" ", $type);
+      // $results = [];
+      // //FOREACH
+      //foreach ($types as &$type) {
+
+      $jobs = Job::with('company')
+        ->when($city, function ($query, $city) {
+          $query->whereHas('company', function ($query) use ($city) {
+            $query->where('city_id', $city);
+          });
+        })
+        ->where(function ($q) use ($type) {
+          // Nested OR condition
+          $q->where('job_name', 'LIKE', '%' . $type . '%')
+            ->orWhere('requirements', 'LIKE', '%' . $type . '%')
+            ->orWhere('job_description', 'LIKE', '%' . $type . '%')
+            ->orWhereHas('company', function ($query) use ($type) {
+              $query->where('name', 'LIKE', '%' . $type . '%');
+            });
+        })
+        ->orderBy('created_at', 'DESC')
+        ->get();
+
+      // foreach ($jobs as &$job) {
+      //   (array_push($results, $job));
+      // }
+      //}
+
+      //$res = array_values(array_unique($results));
+
+      //return $res;
+      return $jobs;
+    } catch (QueryException $e) {
+
+      return \Response::json([
+        'created' => false,
+        'message' => '.. no jobs ..' . $e,
+      ], 500); // 500 - query error
+    }
   }
 
   /**
@@ -90,7 +173,7 @@ class JobController extends Controller
       $rules = [
         'job_name' => 'required',
         'salary' => 'required',
-        'description' => 'required'
+        'job_description' => 'required'
       ];
 
       // Ejecutamos el validador, en caso de que falle devolvemos la respuesta

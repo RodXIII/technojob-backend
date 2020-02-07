@@ -36,7 +36,7 @@ class ProfileController extends Controller {
     $usertype = $decode->data->usertype;
 
     if ($usertype === 'worker') {
-      $user = Worker::with('jobs')->where('token', '=', $token)->first();
+      $user = Worker::with('jobs.company')->where('token', '=', $token)->first();
     } else if ($usertype === 'company') {
       $user = Company::with('jobs')->where('token', '=', $token)->first();
     }
