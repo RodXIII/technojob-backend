@@ -35,13 +35,14 @@ class JobController extends Controller
    * -----------------------------------------------*/
   public function getTopJobs($limit = 500)
   {
-
     // return Job::all();
-    return Job::with('workers')
+    $jobs = Job::with('workers', 'company')
       ->withCount('workers')
       ->orderBy('workers_count', 'desc')
       ->limit($limit)
       ->get();
+
+    return $jobs;
   }
 
   /**
@@ -99,31 +100,41 @@ class JobController extends Controller
         ], 400); // 400 - bad request
       }
 
-      $type = $request->input('type');
-      $words = explode(" ", $type);
-      $results=[];
-      //FOREACH
-      foreach ($words as &$word) {
+      $type = $request->input('input');
+      //$type = $request->input('input');
+      $city = $request->input('city');
+      //$types = explode(" ", $type);
+      // $results = [];
+      // //FOREACH
+      //foreach ($types as &$type) {
 
-        $company = Company::where('name', 'LIKE', '%' . $word . '%')->get();
-        $companyId = 0;
-        if (count($company) === 1) {
-          $companyId = $company[0]->id;
-        }
-        $jobs = Job::where('job_name', 'LIKE', '%' . $word . '%')
-          ->orWhere('requirements', 'LIKE', '%' . $word . '%')
-          ->orWhere('company_id', 'LIKE', $companyId)
-          ->orWhere('description', 'LIKE', '%' . $word . '%')
-          ->orderBy('created_at', 'DESC')
-          ->get();
+      $jobs = Job::with('company')
+        ->when($city, function ($query, $city) {
+          $query->whereHas('company', function ($query) use ($city) {
+            $query->where('city_id', $city);
+          });
+        })
+        ->where(function ($q) use ($type) {
+          // Nested OR condition
+          $q->where('job_name', 'LIKE', '%' . $type . '%')
+            ->orWhere('requirements', 'LIKE', '%' . $type . '%')
+            ->orWhere('job_description', 'LIKE', '%' . $type . '%')
+            ->orWhereHas('company', function ($query) use ($type) {
+              $query->where('name', 'LIKE', '%' . $type . '%');
+            });
+        })
+        ->orderBy('created_at', 'DESC')
+        ->get();
 
-          foreach ($jobs as &$job) {
-            (array_push($results, $job));
-          }
-      }
+      // foreach ($jobs as &$job) {
+      //   (array_push($results, $job));
+      // }
+      //}
 
-      return array_values(array_unique($results));
-      
+      //$res = array_values(array_unique($results));
+
+      //return $res;
+      return $jobs;
     } catch (QueryException $e) {
 
       return \Response::json([
@@ -162,7 +173,7 @@ class JobController extends Controller
       $rules = [
         'job_name' => 'required',
         'salary' => 'required',
-        'description' => 'required'
+        'job_description' => 'required'
       ];
 
       // Ejecutamos el validador, en caso de que falle devolvemos la respuesta

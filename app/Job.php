@@ -14,9 +14,9 @@ class Job extends Model
   /**
    * Relations
    */
-  public function companies()
+  public function company()
   {
-    return $this->hasOne('App\Company');  // take 'id' of companies table
+    return $this->belongsTo('App\Company','company_id','id');  // take 'id' of companies table
   }
   // public function workers()
   // {
