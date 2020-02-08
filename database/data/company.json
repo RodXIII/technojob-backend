@@ -1,801 +1,902 @@
-[{
-        "name": "Compass Diversified Holdings",
-        "cif": "3588685505935496",
-        "email": "graeside0@unc.edu",
-        "password": "rxM2HaEp6l",
-        "city_id": 48,
-        "sector": "Consumer Durables"
-    },
-    {
-        "name": "Marlin Business Services Corp.",
-        "cif": "67633485195276883",
-        "email": "jbrooksbank1@51.la",
-        "password": "cCz5FdCp",
-        "city_id": 43,
-        "sector": "Finance"
-    },
-    {
-        "name": "Mattersight Corporation",
-        "cif": "6759244195689199",
-        "email": "jbosomworth2@slideshare.net",
-        "password": "ictAdflnw",
-        "city_id": 3,
-        "sector": "Technology"
-    },
-    {
-        "name": "Xenon Pharmaceuticals Inc.",
-        "cif": "4917672437498942",
-        "email": "abusby3@theatlantic.com",
-        "password": "w1pSMG3M40CL",
-        "city_id": 29,
-        "sector": "Health Care"
-    },
-    {
-        "name": "BioShares Biotechnology Clinical Trials Fund",
-        "cif": "5602219210935681478",
-        "email": "hkennady4@qq.com",
-        "password": "dzBXdn5f",
-        "city_id": 21,
-        "sector": "n/a"
-    },
-    {
-        "name": "Taubman Centers, Inc.",
-        "cif": "63040976974235542",
-        "email": "gshorrock5@plala.or.jp",
-        "password": "VFDS1K",
-        "city_id": 19,
-        "sector": "n/a"
-    },
-    {
-        "name": "Inogen, Inc",
-        "cif": "374288420716739",
-        "email": "okleewein6@ucsd.edu",
-        "password": "TOZe2gCoy",
-        "city_id": 12,
-        "sector": "Health Care"
-    },
-    {
-        "name": "Twenty-First Century Fox, Inc.",
-        "cif": "6333271325636577522",
-        "email": "thastelow7@discuz.net",
-        "password": "xgzcO4oVPisn",
-        "city_id": 50,
-        "sector": "Consumer Services"
-    },
-    {
-        "name": "First Trust Mid Cap Growth AlphaDEX Fund",
-        "cif": "50185405986688193",
-        "email": "nmusto8@tinyurl.com",
-        "password": "hWgNfa2gu",
-        "city_id": 50,
-        "sector": "n/a"
-    },
-    {
-        "name": "Patterson-UTI Energy, Inc.",
-        "cif": "3554618562585698",
-        "email": "hcarlens9@bbb.org",
-        "password": "6Y9WQTjTs5xC",
-        "city_id": 13,
-        "sector": "Energy"
-    },
-    {
-        "name": "First South Bancorp Inc",
-        "cif": "36510782273599",
-        "email": "tblindta@seattletimes.com",
-        "password": "3ZNLHEW",
-        "city_id": 15,
-        "sector": "Finance"
-    },
-    {
-        "name": "Scorpio Bulkers Inc.",
-        "cif": "3533432488787289",
-        "email": "rriccettib@washington.edu",
-        "password": "yPcgiAMG",
-        "city_id": 11,
-        "sector": "Transportation"
-    },
-    {
-        "name": "Conduent Incorporated",
-        "cif": "3543229982439815",
-        "email": "aandreolettic@delicious.com",
-        "password": "DNbKwq",
-        "city_id": 31,
-        "sector": "Miscellaneous"
-    },
-    {
-        "name": "Nike, Inc.",
-        "cif": "6763820435300881169",
-        "email": "srandd@yelp.com",
-        "password": "f6K8lDXYSv1",
-        "city_id": 49,
-        "sector": "Consumer Non-Durables"
-    },
-    {
-        "name": "Obalon Therapeutics, Inc.",
-        "cif": "3562728182295618",
-        "email": "thatchere@virginia.edu",
-        "password": "88c1WEmy9xi",
-        "city_id": 7,
-        "sector": "Health Care"
-    },
-    {
-        "name": "iShares FTSE EPRA/NAREIT Global Real Estate ex-U.S. Index Fund",
-        "cif": "374288463452903",
-        "email": "bsprossonf@hp.com",
-        "password": "m5Yhx8wDPsM",
-        "city_id": 20,
-        "sector": "n/a"
-    },
-    {
-        "name": "Triumph Group, Inc.",
-        "cif": "4041377438028396",
-        "email": "eallnuttg@naver.com",
-        "password": "DWEFJAwl27n",
-        "city_id": 12,
-        "sector": "Capital Goods"
-    },
-    {
-        "name": "Eagle Bulk Shipping Inc.",
-        "cif": "4026011368388483",
-        "email": "tvickermanh@whitehouse.gov",
-        "password": "92DwPhl",
-        "city_id": 41,
-        "sector": "Transportation"
-    },
-    {
-        "name": "Glen Burnie Bancorp",
-        "cif": "633468038587685903",
-        "email": "wfairclothi@163.com",
-        "password": "So4m4n",
-        "city_id": 19,
-        "sector": "Finance"
-    },
-    {
-        "name": "Alere Inc.",
-        "cif": "349339342996990",
-        "email": "rroundtreej@usatoday.com",
-        "password": "oEsYkyMpEm",
-        "city_id": 51,
-        "sector": "Health Care"
-    },
-    {
-        "name": "Center Coast MLP & Infrastructure Fund",
-        "cif": "3563464584385885",
-        "email": "cweinerk@arizona.edu",
-        "password": "tC88IO",
-        "city_id": 13,
-        "sector": "n/a"
-    },
-    {
-        "name": "CSG Systems International, Inc.",
-        "cif": "5108756456592168",
-        "email": "mmacavddyl@networksolutions.com",
-        "password": "Jbqq6yP8Iu",
-        "city_id": 34,
-        "sector": "Technology"
-    },
-    {
-        "name": "Hartford Financial Services Group, Inc. (The)",
-        "cif": "3572712823071057",
-        "email": "kblindermannm@nifty.com",
-        "password": "YDiqyR",
-        "city_id": 46,
-        "sector": "Finance"
-    },
-    {
-        "name": "Alexion Pharmaceuticals, Inc.",
-        "cif": "4917272846638780",
-        "email": "acomern@moonfruit.com",
-        "password": "4yWNeAYYm",
-        "city_id": 48,
-        "sector": "Health Care"
-    },
-    {
-        "name": "BMC Stock Holdings, Inc.",
-        "cif": "3544853192087699",
-        "email": "kkupiszo@naver.com",
-        "password": "HWUttw4xy",
-        "city_id": 40,
-        "sector": "Consumer Services"
-    },
-    {
-        "name": "PowerShares KBW Property & Casualty Insurance Portfolio",
-        "cif": "4917751526998218",
-        "email": "mscamadinp@blinklist.com",
-        "password": "Jbr2bx",
-        "city_id": 2,
-        "sector": "n/a"
-    },
-    {
-        "name": "General Motors Company",
-        "cif": "67610572687283241",
-        "email": "vhiomq@twitter.com",
-        "password": "cWWNIUl5",
-        "city_id": 41,
-        "sector": "Capital Goods"
-    },
-    {
-        "name": "Koss Corporation",
-        "cif": "30573949567341",
-        "email": "bwilcockesr@google.com",
-        "password": "X892WCenhFS",
-        "city_id": 52,
-        "sector": "Consumer Non-Durables"
-    },
-    {
-        "name": "Sirius XM Holdings Inc.",
-        "cif": "30067952220781",
-        "email": "mgamlins@trellian.com",
-        "password": "Y6LvKsoUybP4",
-        "city_id": 42,
-        "sector": "Consumer Services"
-    },
-    {
-        "name": "Flaherty & Crumrine Preferred Income Opportunity Fund Inc",
-        "cif": "4405383608204502",
-        "email": "ffluitt@techcrunch.com",
-        "password": "tUTkyFopq",
-        "city_id": 8,
-        "sector": "n/a"
-    },
-    {
-        "name": "Eastern Virginia Bankshares, Inc.",
-        "cif": "4936430705832160",
-        "email": "bhelleru@meetup.com",
-        "password": "5FkWi6w4B",
-        "city_id": 8,
-        "sector": "Finance"
-    },
-    {
-        "name": "Pebblebrook Hotel Trust",
-        "cif": "6377560555626014",
-        "email": "fmatzenv@latimes.com",
-        "password": "yFmOCclM",
-        "city_id": 6,
-        "sector": "n/a"
-    },
-    {
-        "name": "Physicians Realty Trust",
-        "cif": "3547967653222228",
-        "email": "hrickeardw@china.com.cn",
-        "password": "PhmJdUHDF",
-        "city_id": 52,
-        "sector": "Consumer Services"
-    },
-    {
-        "name": "Central Garden & Pet Company",
-        "cif": "5602237819442723",
-        "email": "slaugheranx@weather.com",
-        "password": "zYlwIlB8F4",
-        "city_id": 15,
-        "sector": "Consumer Durables"
-    },
-    {
-        "name": "Kayne Anderson Midstream Energy Fund, Inc",
-        "cif": "3554110452265011",
-        "email": "ttomaselliy@vinaora.com",
-        "password": "Rkk46t",
-        "city_id": 47,
-        "sector": "n/a"
-    },
-    {
-        "name": "Neurotrope, Inc.",
-        "cif": "5893272967703483",
-        "email": "rgrayhamz@usgs.gov",
-        "password": "of39yTszy2",
-        "city_id": 6,
-        "sector": "Health Care"
-    },
-    {
-        "name": "Odyssey Marine Exploration, Inc.",
-        "cif": "3567065226623561",
-        "email": "cnail10@hc360.com",
-        "password": "J7h32vQPFYzK",
-        "city_id": 11,
-        "sector": "Consumer Services"
-    },
-    {
-        "name": "Scorpio Bulkers Inc.",
-        "cif": "5602253987197874",
-        "email": "bstreet11@xing.com",
-        "password": "V8S1aWXk4",
-        "city_id": 3,
-        "sector": "Transportation"
-    },
-    {
-        "name": "Cloudera, Inc.",
-        "cif": "3583149331940175",
-        "email": "gcornish12@google.fr",
-        "password": "d1iqmBLjpzp3",
-        "city_id": 3,
-        "sector": "Technology"
-    },
-    {
-        "name": "Pulmatrix, Inc.",
-        "cif": "56022425500871855",
-        "email": "jmicallef13@feedburner.com",
-        "password": "q0FUYq0a",
-        "city_id": 42,
-        "sector": "Health Care"
-    },
-    {
-        "name": "Capital One Financial Corporation",
-        "cif": "3536467781682354",
-        "email": "rmackeller14@nifty.com",
-        "password": "FSlw1XT",
-        "city_id": 36,
-        "sector": "n/a"
-    },
-    {
-        "name": "Allegheny Technologies Incorporated",
-        "cif": "5602255017013211",
-        "email": "cmcpherson15@devhub.com",
-        "password": "8fbQCOwpPqj",
-        "city_id": 38,
-        "sector": "Basic Industries"
-    },
-    {
-        "name": "Energy Transfer Partners, L.P.",
-        "cif": "6767036829624166136",
-        "email": "vcapstaff16@xing.com",
-        "password": "PxoVqXuzIR",
-        "city_id": 20,
-        "sector": "Energy"
-    },
-    {
-        "name": "Wabash National Corporation",
-        "cif": "3585964937850125",
-        "email": "mborsnall17@theglobeandmail.com",
-        "password": "uTkT2l24Hqbq",
-        "city_id": 43,
-        "sector": "Capital Goods"
-    },
-    {
-        "name": "Calavo Growers, Inc.",
-        "cif": "676247742094759997",
-        "email": "npooke18@rambler.ru",
-        "password": "yxQNeMR9vc81",
-        "city_id": 41,
-        "sector": "Consumer Non-Durables"
-    },
-    {
-        "name": "Blackrock MuniAssets Fund, Inc.",
-        "cif": "3547849203982800",
-        "email": "alochead19@netlog.com",
-        "password": "HvfYkpiUoYmZ",
-        "city_id": 11,
-        "sector": "n/a"
-    },
-    {
-        "name": "Cardiovascular Systems, Inc.",
-        "cif": "3535424643742539",
-        "email": "tjovicevic1a@stanford.edu",
-        "password": "WXJ6xMp",
-        "city_id": 2,
-        "sector": "Health Care"
-    },
-    {
-        "name": "MB Financial Inc.",
-        "cif": "6767273734126108",
-        "email": "hmcmeeking1b@myspace.com",
-        "password": "Fllf0AAf8f",
-        "city_id": 36,
-        "sector": "Finance"
-    },
-    {
-        "name": "BlackRock Municipal Target Term Trust Inc. (The)",
-        "cif": "6389614982095560",
-        "email": "cdriver1c@accuweather.com",
-        "password": "p967014tj",
-        "city_id": 40,
-        "sector": "n/a"
-    },
-    {
-        "name": "Stepan Company",
-        "cif": "3529980259699766",
-        "email": "bhuard1d@guardian.co.uk",
-        "password": "Iuh4AcaiKpg",
-        "city_id": 8,
-        "sector": "Basic Industries"
-    },
-    {
-        "name": "Lifetime Brands, Inc.",
-        "cif": "3583513520582082",
-        "email": "sormrod1e@wunderground.com",
-        "password": "rf6pPTk1",
-        "city_id": 43,
-        "sector": "Capital Goods"
-    },
-    {
-        "name": "Hilltop Holdings Inc.",
-        "cif": "3553251337719961",
-        "email": "jperri1f@mozilla.com",
-        "password": "jpeGLQh",
-        "city_id": 40,
-        "sector": "Finance"
-    },
-    {
-        "name": "Silver Spring Networks, Inc.",
-        "cif": "3579518968731220",
-        "email": "smaccome1g@arstechnica.com",
-        "password": "ACLcHk4",
-        "city_id": 49,
-        "sector": "Technology"
-    },
-    {
-        "name": "Albireo Pharma, Inc.",
-        "cif": "4017956042591806",
-        "email": "tpirozzi1h@sbwire.com",
-        "password": "3AcVNtT",
-        "city_id": 13,
-        "sector": "Health Care"
-    },
-    {
-        "name": "Intuitive Surgical, Inc.",
-        "cif": "3545060980212161",
-        "email": "cgilcriest1i@sbwire.com",
-        "password": "oh1voBI",
-        "city_id": 7,
-        "sector": "Health Care"
-    },
-    {
-        "name": "Limoneira Co",
-        "cif": "3584831614550677",
-        "email": "snorker1j@etsy.com",
-        "password": "LXIYve",
-        "city_id": 37,
-        "sector": "Consumer Non-Durables"
-    },
-    {
-        "name": "Highland Funds I",
-        "cif": "374288596206911",
-        "email": "hhards1k@zdnet.com",
-        "password": "5cdnO5hUVT",
-        "city_id": 41,
-        "sector": "n/a"
-    },
-    {
-        "name": "E.I. du Pont de Nemours and Company",
-        "cif": "3548436979880274",
-        "email": "hlanceley1l@gravatar.com",
-        "password": "mncUj8xN42t",
-        "city_id": 3,
-        "sector": "Basic Industries"
-    },
-    {
-        "name": "Howard Bancorp, Inc.",
-        "cif": "5048374448775827",
-        "email": "lgrayshan1m@unesco.org",
-        "password": "Qa19btIM",
-        "city_id": 11,
-        "sector": "Finance"
-    },
-    {
-        "name": "Textron Inc.",
-        "cif": "3564657452097636",
-        "email": "bkleinberer1n@uol.com.br",
-        "password": "QL4FMI",
-        "city_id": 6,
-        "sector": "Capital Goods"
-    },
-    {
-        "name": "The Hain Celestial Group, Inc.",
-        "cif": "3560984914123774",
-        "email": "ccaukill1o@va.gov",
-        "password": "02dBNQQufw",
-        "city_id": 48,
-        "sector": "Consumer Non-Durables"
-    },
-    {
-        "name": "Pernix Therapeutics Holdings, Inc.",
-        "cif": "3562851717235147",
-        "email": "msword1p@edublogs.org",
-        "password": "VV9Bdx95",
-        "city_id": 44,
-        "sector": "Health Care"
-    },
-    {
-        "name": "New York REIT, Inc.",
-        "cif": "3559857452604038",
-        "email": "wbetjes1q@bluehost.com",
-        "password": "pq8gZqdxih",
-        "city_id": 29,
-        "sector": "Consumer Services"
-    },
-    {
-        "name": "Houston Wire & Cable Company",
-        "cif": "36290131807492",
-        "email": "lcoping1r@stanford.edu",
-        "password": "OGMq1Qq8Lxy",
-        "city_id": 23,
-        "sector": "Consumer Non-Durables"
-    },
-    {
-        "name": "Kayne Anderson MLP Investment Company",
-        "cif": "6759487550362361",
-        "email": "lmizzi1s@ameblo.jp",
-        "password": "EOHV6TISV3Z",
-        "city_id": 35,
-        "sector": "n/a"
-    },
-    {
-        "name": "Goldman Sachs MLP Energy Renaissance Fund",
-        "cif": "589377894654564312",
-        "email": "hgaythwaite1t@amazon.de",
-        "password": "7oGeOuiDX",
-        "city_id": 5,
-        "sector": "n/a"
-    },
-    {
-        "name": "FleetCor Technologies, Inc.",
-        "cif": "3558806816047047",
-        "email": "lcumbes1u@live.com",
-        "password": "JruVQxwnKYC",
-        "city_id": 37,
-        "sector": "Miscellaneous"
-    },
-    {
-        "name": "PHI, Inc.",
-        "cif": "4405411341909416",
-        "email": "aeastway1v@google.de",
-        "password": "bi7RpW",
-        "city_id": 27,
-        "sector": "Transportation"
-    },
-    {
-        "name": "Welltower Inc.",
-        "cif": "5602257347244201",
-        "email": "msyme1w@msu.edu",
-        "password": "s6X9hrzytZ1",
-        "city_id": 40,
-        "sector": "n/a"
-    },
-    {
-        "name": "Heico Corporation",
-        "cif": "4175009470849516",
-        "email": "ntuson1x@wiley.com",
-        "password": "ZXq0NvS6FUUs",
-        "city_id": 16,
-        "sector": "n/a"
-    },
-    {
-        "name": "iKang Healthcare Group, Inc.",
-        "cif": "3533737641021719",
-        "email": "adignum1y@nasa.gov",
-        "password": "Eb3VVo",
-        "city_id": 40,
-        "sector": "Health Care"
-    },
-    {
-        "name": "Eaton Vance Enhanced Equity Income Fund II",
-        "cif": "3581228818412791",
-        "email": "chedgeman1z@about.com",
-        "password": "VTdjDRL19a",
-        "city_id": 42,
-        "sector": "n/a"
-    },
-    {
-        "name": "Cooper Companies, Inc. (The)",
-        "cif": "3542856019546195",
-        "email": "smanns20@wiley.com",
-        "password": "71ki0Ii",
-        "city_id": 2,
-        "sector": "Health Care"
-    },
-    {
-        "name": "Zimmer Biomet Holdings, Inc.",
-        "cif": "376247637400170",
-        "email": "julyatt21@discuz.net",
-        "password": "EfDKcMyjSVRV",
-        "city_id": 47,
-        "sector": "Health Care"
-    },
-    {
-        "name": "NiSource, Inc",
-        "cif": "5602220356209598",
-        "email": "esummerlad22@oaic.gov.au",
-        "password": "V8yNCBjzJc",
-        "city_id": 46,
-        "sector": "Public Utilities"
-    },
-    {
-        "name": "Tetra Technologies, Inc.",
-        "cif": "3563671984520719",
-        "email": "sdyment23@wordpress.com",
-        "password": "GykCMttbg1",
-        "city_id": 24,
-        "sector": "Energy"
-    },
-    {
-        "name": "Hutchison China MediTech Limited",
-        "cif": "560221205839072817",
-        "email": "ghefforde24@unc.edu",
-        "password": "pfSmxWrw",
-        "city_id": 1,
-        "sector": "Health Care"
-    },
-    {
-        "name": "Rite Aid Corporation",
-        "cif": "374622658163737",
-        "email": "bpratte25@about.me",
-        "password": "hwSQoi",
-        "city_id": 22,
-        "sector": "Health Care"
-    },
-    {
-        "name": "Workhorse Group, Inc.",
-        "cif": "3556541684838753",
-        "email": "bgreschik26@hibu.com",
-        "password": "vCTjtp",
-        "city_id": 6,
-        "sector": "Capital Goods"
-    },
-    {
-        "name": "Twitter, Inc.",
-        "cif": "4903279815911482",
-        "email": "jgilham27@illinois.edu",
-        "password": "8hyeW1pFS2B",
-        "city_id": 7,
-        "sector": "Technology"
-    },
-    {
-        "name": "Gamco Investors, Inc.",
-        "cif": "3533572406316339",
-        "email": "roscollee28@accuweather.com",
-        "password": "DR2atDmR",
-        "city_id": 19,
-        "sector": "Finance"
-    },
-    {
-        "name": "Vanguard Russell 1000 Value ETF",
-        "cif": "6767787727256119",
-        "email": "afretwell29@shutterfly.com",
-        "password": "eIeSjL54WG",
-        "city_id": 23,
-        "sector": "n/a"
-    },
-    {
-        "name": "Cumberland Pharmaceuticals Inc.",
-        "cif": "675982583863315533",
-        "email": "tmingasson2a@amazon.com",
-        "password": "xIjuoTF",
-        "city_id": 22,
-        "sector": "Health Care"
-    },
-    {
-        "name": "Landcadia Holdings, Inc.",
-        "cif": "5020924607296058884",
-        "email": "wlegerwood2b@seesaa.net",
-        "password": "0N3pym",
-        "city_id": 33,
-        "sector": "Finance"
-    },
-    {
-        "name": "Energizer Holdings, Inc.",
-        "cif": "3530160093019045",
-        "email": "ebiddulph2c@house.gov",
-        "password": "uVQgeH",
-        "city_id": 30,
-        "sector": "Miscellaneous"
-    },
-    {
-        "name": "Aviat Networks, Inc.",
-        "cif": "5100146811912434",
-        "email": "nbiggadike2d@altervista.org",
-        "password": "qarsXhMub",
-        "city_id": 46,
-        "sector": "Technology"
-    },
-    {
-        "name": "Dominion Energy, Inc.",
-        "cif": "4664574752837",
-        "email": "mdeeny2e@yellowpages.com",
-        "password": "c9nuJQ",
-        "city_id": 7,
-        "sector": "Public Utilities"
-    },
-    {
-        "name": "WisdomTree U.S. Quality Dividend Growth Fund",
-        "cif": "3589092154369235",
-        "email": "awetherburn2f@bing.com",
-        "password": "HH9GYtTd",
-        "city_id": 46,
-        "sector": "n/a"
-    },
-    {
-        "name": "Landcadia Holdings, Inc.",
-        "cif": "676764356369275069",
-        "email": "cfaunt2g@irs.gov",
-        "password": "Grn5qQ",
-        "city_id": 23,
-        "sector": "Finance"
-    },
-    {
-        "name": "Northwest Pipe Company",
-        "cif": "5500710968251338",
-        "email": "ldransfield2h@senate.gov",
-        "password": "YWeodp52t",
-        "city_id": 34,
-        "sector": "Basic Industries"
-    },
-    {
-        "name": "AMAG Pharmaceuticals, Inc.",
-        "cif": "3548423790365990",
-        "email": "hcarle2i@hatena.ne.jp",
-        "password": "uCEInKvHpcq5",
-        "city_id": 45,
-        "sector": "Health Care"
-    },
-    {
-        "name": "Raytheon Company",
-        "cif": "6304802075503694590",
-        "email": "sscruton2j@fc2.com",
-        "password": "e8XH54n6Kv",
-        "city_id": 51,
-        "sector": "Capital Goods"
-    },
-    {
-        "name": "CABCO Series 2004-101 Trust",
-        "cif": "3541370751608156",
-        "email": "dcunnah2k@dailymotion.com",
-        "password": "8SpdDPBc6rn",
-        "city_id": 5,
-        "sector": "Finance"
-    },
-    {
-        "name": "FRP Holdings, Inc.",
-        "cif": "3585505898971085",
-        "email": "pdorrins2l@symantec.com",
-        "password": "fV60RZrzTe9",
-        "city_id": 8,
-        "sector": "Finance"
-    },
-    {
-        "name": "Echelon Corporation",
-        "cif": "5610185895143295",
-        "email": "ssimmonds2m@yellowpages.com",
-        "password": "KG7ROqI7V",
-        "city_id": 14,
-        "sector": "Technology"
-    },
-    {
-        "name": "Bank of South Carolina Corp.",
-        "cif": "3553208107540928",
-        "email": "ubraybrooks2n@prweb.com",
-        "password": "evMooTPG",
-        "city_id": 30,
-        "sector": "Finance"
-    },
-    {
-        "name": "Altra Industrial Motion Corp.",
-        "cif": "3562149503944513",
-        "email": "ytempest2o@oaic.gov.au",
-        "password": "xeXOkS",
-        "city_id": 29,
-        "sector": "Capital Goods"
-    },
-    {
-        "name": "The Michaels Companies, Inc.",
-        "cif": "4911412093421615916",
-        "email": "ktitchen2p@sina.com.cn",
-        "password": "TiaUNkycnEb",
-        "city_id": 17,
-        "sector": "Consumer Services"
-    },
-    {
-        "name": "QTS Realty Trust, Inc.",
-        "cif": "4175003279551480",
-        "email": "kmenhenitt2q@hatena.ne.jp",
-        "password": "3st2Pq33eJ",
-        "city_id": 1,
-        "sector": "Consumer Services"
-    },
-    {
-        "name": "Select Energy Services, Inc.",
-        "cif": "6333822030976349912",
-        "email": "mcabena2r@blogger.com",
-        "password": "8tOgZJf6",
-        "city_id": 19,
-        "sector": "Energy"
-    }
+[
+  {
+    "name": "Compass Diversified Holdings",
+    "cif": "3588685505935496",
+    "email": "graeside0@unc.edu",
+    "password": "rxM2HaEp6l",
+    "city_id": 48,
+    "sector": "Consumer Durables",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Marlin Business Services Corp.",
+    "cif": "67633485195276883",
+    "email": "jbrooksbank1@51.la",
+    "password": "cCz5FdCp",
+    "city_id": 43,
+    "sector": "Finance",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Mattersight Corporation",
+    "cif": "6759244195689199",
+    "email": "jbosomworth2@slideshare.net",
+    "password": "ictAdflnw",
+    "city_id": 3,
+    "sector": "Technology",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Xenon Pharmaceuticals Inc.",
+    "cif": "4917672437498942",
+    "email": "abusby3@theatlantic.com",
+    "password": "w1pSMG3M40CL",
+    "city_id": 29,
+    "sector": "Health Care",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "BioShares Biotechnology Clinical Trials Fund",
+    "cif": "5602219210935681478",
+    "email": "hkennady4@qq.com",
+    "password": "dzBXdn5f",
+    "city_id": 21,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Taubman Centers, Inc.",
+    "cif": "63040976974235542",
+    "email": "gshorrock5@plala.or.jp",
+    "password": "VFDS1K",
+    "city_id": 19,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Inogen, Inc",
+    "cif": "374288420716739",
+    "email": "okleewein6@ucsd.edu",
+    "password": "TOZe2gCoy",
+    "city_id": 12,
+    "sector": "Health Care",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Twenty-First Century Fox, Inc.",
+    "cif": "6333271325636577522",
+    "email": "thastelow7@discuz.net",
+    "password": "xgzcO4oVPisn",
+    "city_id": 50,
+    "sector": "Consumer Services",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "First Trust Mid Cap Growth AlphaDEX Fund",
+    "cif": "50185405986688193",
+    "email": "nmusto8@tinyurl.com",
+    "password": "hWgNfa2gu",
+    "city_id": 50,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Patterson-UTI Energy, Inc.",
+    "cif": "3554618562585698",
+    "email": "hcarlens9@bbb.org",
+    "password": "6Y9WQTjTs5xC",
+    "city_id": 13,
+    "sector": "Energy",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "First South Bancorp Inc",
+    "cif": "36510782273599",
+    "email": "tblindta@seattletimes.com",
+    "password": "3ZNLHEW",
+    "city_id": 15,
+    "sector": "Finance",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Scorpio Bulkers Inc.",
+    "cif": "3533432488787289",
+    "email": "rriccettib@washington.edu",
+    "password": "yPcgiAMG",
+    "city_id": 11,
+    "sector": "Transportation",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Conduent Incorporated",
+    "cif": "3543229982439815",
+    "email": "aandreolettic@delicious.com",
+    "password": "DNbKwq",
+    "city_id": 31,
+    "sector": "Miscellaneous",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Nike, Inc.",
+    "cif": "6763820435300881169",
+    "email": "srandd@yelp.com",
+    "password": "f6K8lDXYSv1",
+    "city_id": 49,
+    "sector": "Consumer Non-Durables",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Obalon Therapeutics, Inc.",
+    "cif": "3562728182295618",
+    "email": "thatchere@virginia.edu",
+    "password": "88c1WEmy9xi",
+    "city_id": 7,
+    "sector": "Health Care",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "iShares FTSE EPRA/NAREIT Global Real Estate ex-U.S. Index Fund",
+    "cif": "374288463452903",
+    "email": "bsprossonf@hp.com",
+    "password": "m5Yhx8wDPsM",
+    "city_id": 20,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Triumph Group, Inc.",
+    "cif": "4041377438028396",
+    "email": "eallnuttg@naver.com",
+    "password": "DWEFJAwl27n",
+    "city_id": 12,
+    "sector": "Capital Goods",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Eagle Bulk Shipping Inc.",
+    "cif": "4026011368388483",
+    "email": "tvickermanh@whitehouse.gov",
+    "password": "92DwPhl",
+    "city_id": 41,
+    "sector": "Transportation",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Glen Burnie Bancorp",
+    "cif": "633468038587685903",
+    "email": "wfairclothi@163.com",
+    "password": "So4m4n",
+    "city_id": 19,
+    "sector": "Finance",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Alere Inc.",
+    "cif": "349339342996990",
+    "email": "rroundtreej@usatoday.com",
+    "password": "oEsYkyMpEm",
+    "city_id": 51,
+    "sector": "Health Care",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Center Coast MLP & Infrastructure Fund",
+    "cif": "3563464584385885",
+    "email": "cweinerk@arizona.edu",
+    "password": "tC88IO",
+    "city_id": 13,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "CSG Systems International, Inc.",
+    "cif": "5108756456592168",
+    "email": "mmacavddyl@networksolutions.com",
+    "password": "Jbqq6yP8Iu",
+    "city_id": 34,
+    "sector": "Technology",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Hartford Financial Services Group, Inc. (The)",
+    "cif": "3572712823071057",
+    "email": "kblindermannm@nifty.com",
+    "password": "YDiqyR",
+    "city_id": 46,
+    "sector": "Finance",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Alexion Pharmaceuticals, Inc.",
+    "cif": "4917272846638780",
+    "email": "acomern@moonfruit.com",
+    "password": "4yWNeAYYm",
+    "city_id": 48,
+    "sector": "Health Care",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "BMC Stock Holdings, Inc.",
+    "cif": "3544853192087699",
+    "email": "kkupiszo@naver.com",
+    "password": "HWUttw4xy",
+    "city_id": 40,
+    "sector": "Consumer Services",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "PowerShares KBW Property & Casualty Insurance Portfolio",
+    "cif": "4917751526998218",
+    "email": "mscamadinp@blinklist.com",
+    "password": "Jbr2bx",
+    "city_id": 2,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "General Motors Company",
+    "cif": "67610572687283241",
+    "email": "vhiomq@twitter.com",
+    "password": "cWWNIUl5",
+    "city_id": 41,
+    "sector": "Capital Goods",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Koss Corporation",
+    "cif": "30573949567341",
+    "email": "bwilcockesr@google.com",
+    "password": "X892WCenhFS",
+    "city_id": 52,
+    "sector": "Consumer Non-Durables",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Sirius XM Holdings Inc.",
+    "cif": "30067952220781",
+    "email": "mgamlins@trellian.com",
+    "password": "Y6LvKsoUybP4",
+    "city_id": 42,
+    "sector": "Consumer Services",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Flaherty & Crumrine Preferred Income Opportunity Fund Inc",
+    "cif": "4405383608204502",
+    "email": "ffluitt@techcrunch.com",
+    "password": "tUTkyFopq",
+    "city_id": 8,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Eastern Virginia Bankshares, Inc.",
+    "cif": "4936430705832160",
+    "email": "bhelleru@meetup.com",
+    "password": "5FkWi6w4B",
+    "city_id": 8,
+    "sector": "Finance",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Pebblebrook Hotel Trust",
+    "cif": "6377560555626014",
+    "email": "fmatzenv@latimes.com",
+    "password": "yFmOCclM",
+    "city_id": 6,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Physicians Realty Trust",
+    "cif": "3547967653222228",
+    "email": "hrickeardw@china.com.cn",
+    "password": "PhmJdUHDF",
+    "city_id": 52,
+    "sector": "Consumer Services",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Central Garden & Pet Company",
+    "cif": "5602237819442723",
+    "email": "slaugheranx@weather.com",
+    "password": "zYlwIlB8F4",
+    "city_id": 15,
+    "sector": "Consumer Durables",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Kayne Anderson Midstream Energy Fund, Inc",
+    "cif": "3554110452265011",
+    "email": "ttomaselliy@vinaora.com",
+    "password": "Rkk46t",
+    "city_id": 47,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Neurotrope, Inc.",
+    "cif": "5893272967703483",
+    "email": "rgrayhamz@usgs.gov",
+    "password": "of39yTszy2",
+    "city_id": 6,
+    "sector": "Health Care",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Odyssey Marine Exploration, Inc.",
+    "cif": "3567065226623561",
+    "email": "cnail10@hc360.com",
+    "password": "J7h32vQPFYzK",
+    "city_id": 11,
+    "sector": "Consumer Services",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Scorpio Bulkers Inc.",
+    "cif": "5602253987197874",
+    "email": "bstreet11@xing.com",
+    "password": "V8S1aWXk4",
+    "city_id": 3,
+    "sector": "Transportation",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Cloudera, Inc.",
+    "cif": "3583149331940175",
+    "email": "gcornish12@google.fr",
+    "password": "d1iqmBLjpzp3",
+    "city_id": 3,
+    "sector": "Technology",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Pulmatrix, Inc.",
+    "cif": "56022425500871855",
+    "email": "jmicallef13@feedburner.com",
+    "password": "q0FUYq0a",
+    "city_id": 42,
+    "sector": "Health Care",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Capital One Financial Corporation",
+    "cif": "3536467781682354",
+    "email": "rmackeller14@nifty.com",
+    "password": "FSlw1XT",
+    "city_id": 36,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Allegheny Technologies Incorporated",
+    "cif": "5602255017013211",
+    "email": "cmcpherson15@devhub.com",
+    "password": "8fbQCOwpPqj",
+    "city_id": 38,
+    "sector": "Basic Industries",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Energy Transfer Partners, L.P.",
+    "cif": "6767036829624166136",
+    "email": "vcapstaff16@xing.com",
+    "password": "PxoVqXuzIR",
+    "city_id": 20,
+    "sector": "Energy",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Wabash National Corporation",
+    "cif": "3585964937850125",
+    "email": "mborsnall17@theglobeandmail.com",
+    "password": "uTkT2l24Hqbq",
+    "city_id": 43,
+    "sector": "Capital Goods",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Calavo Growers, Inc.",
+    "cif": "676247742094759997",
+    "email": "npooke18@rambler.ru",
+    "password": "yxQNeMR9vc81",
+    "city_id": 41,
+    "sector": "Consumer Non-Durables",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Blackrock MuniAssets Fund, Inc.",
+    "cif": "3547849203982800",
+    "email": "alochead19@netlog.com",
+    "password": "HvfYkpiUoYmZ",
+    "city_id": 11,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Cardiovascular Systems, Inc.",
+    "cif": "3535424643742539",
+    "email": "tjovicevic1a@stanford.edu",
+    "password": "WXJ6xMp",
+    "city_id": 2,
+    "sector": "Health Care",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "MB Financial Inc.",
+    "cif": "6767273734126108",
+    "email": "hmcmeeking1b@myspace.com",
+    "password": "Fllf0AAf8f",
+    "city_id": 36,
+    "sector": "Finance",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "BlackRock Municipal Target Term Trust Inc. (The)",
+    "cif": "6389614982095560",
+    "email": "cdriver1c@accuweather.com",
+    "password": "p967014tj",
+    "city_id": 40,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Stepan Company",
+    "cif": "3529980259699766",
+    "email": "bhuard1d@guardian.co.uk",
+    "password": "Iuh4AcaiKpg",
+    "city_id": 8,
+    "sector": "Basic Industries",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Lifetime Brands, Inc.",
+    "cif": "3583513520582082",
+    "email": "sormrod1e@wunderground.com",
+    "password": "rf6pPTk1",
+    "city_id": 43,
+    "sector": "Capital Goods",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Hilltop Holdings Inc.",
+    "cif": "3553251337719961",
+    "email": "jperri1f@mozilla.com",
+    "password": "jpeGLQh",
+    "city_id": 40,
+    "sector": "Finance",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Silver Spring Networks, Inc.",
+    "cif": "3579518968731220",
+    "email": "smaccome1g@arstechnica.com",
+    "password": "ACLcHk4",
+    "city_id": 49,
+    "sector": "Technology",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Albireo Pharma, Inc.",
+    "cif": "4017956042591806",
+    "email": "tpirozzi1h@sbwire.com",
+    "password": "3AcVNtT",
+    "city_id": 13,
+    "sector": "Health Care",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Intuitive Surgical, Inc.",
+    "cif": "3545060980212161",
+    "email": "cgilcriest1i@sbwire.com",
+    "password": "oh1voBI",
+    "city_id": 7,
+    "sector": "Health Care",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Limoneira Co",
+    "cif": "3584831614550677",
+    "email": "snorker1j@etsy.com",
+    "password": "LXIYve",
+    "city_id": 37,
+    "sector": "Consumer Non-Durables",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Highland Funds I",
+    "cif": "374288596206911",
+    "email": "hhards1k@zdnet.com",
+    "password": "5cdnO5hUVT",
+    "city_id": 41,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "E.I. du Pont de Nemours and Company",
+    "cif": "3548436979880274",
+    "email": "hlanceley1l@gravatar.com",
+    "password": "mncUj8xN42t",
+    "city_id": 3,
+    "sector": "Basic Industries",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Howard Bancorp, Inc.",
+    "cif": "5048374448775827",
+    "email": "lgrayshan1m@unesco.org",
+    "password": "Qa19btIM",
+    "city_id": 11,
+    "sector": "Finance",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Textron Inc.",
+    "cif": "3564657452097636",
+    "email": "bkleinberer1n@uol.com.br",
+    "password": "QL4FMI",
+    "city_id": 6,
+    "sector": "Capital Goods",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "The Hain Celestial Group, Inc.",
+    "cif": "3560984914123774",
+    "email": "ccaukill1o@va.gov",
+    "password": "02dBNQQufw",
+    "city_id": 48,
+    "sector": "Consumer Non-Durables",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Pernix Therapeutics Holdings, Inc.",
+    "cif": "3562851717235147",
+    "email": "msword1p@edublogs.org",
+    "password": "VV9Bdx95",
+    "city_id": 44,
+    "sector": "Health Care",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "New York REIT, Inc.",
+    "cif": "3559857452604038",
+    "email": "wbetjes1q@bluehost.com",
+    "password": "pq8gZqdxih",
+    "city_id": 29,
+    "sector": "Consumer Services",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Houston Wire & Cable Company",
+    "cif": "36290131807492",
+    "email": "lcoping1r@stanford.edu",
+    "password": "OGMq1Qq8Lxy",
+    "city_id": 23,
+    "sector": "Consumer Non-Durables",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Kayne Anderson MLP Investment Company",
+    "cif": "6759487550362361",
+    "email": "lmizzi1s@ameblo.jp",
+    "password": "EOHV6TISV3Z",
+    "city_id": 35,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Goldman Sachs MLP Energy Renaissance Fund",
+    "cif": "589377894654564312",
+    "email": "hgaythwaite1t@amazon.de",
+    "password": "7oGeOuiDX",
+    "city_id": 5,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "FleetCor Technologies, Inc.",
+    "cif": "3558806816047047",
+    "email": "lcumbes1u@live.com",
+    "password": "JruVQxwnKYC",
+    "city_id": 37,
+    "sector": "Miscellaneous",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "PHI, Inc.",
+    "cif": "4405411341909416",
+    "email": "aeastway1v@google.de",
+    "password": "bi7RpW",
+    "city_id": 27,
+    "sector": "Transportation",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Welltower Inc.",
+    "cif": "5602257347244201",
+    "email": "msyme1w@msu.edu",
+    "password": "s6X9hrzytZ1",
+    "city_id": 40,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Heico Corporation",
+    "cif": "4175009470849516",
+    "email": "ntuson1x@wiley.com",
+    "password": "ZXq0NvS6FUUs",
+    "city_id": 16,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "iKang Healthcare Group, Inc.",
+    "cif": "3533737641021719",
+    "email": "adignum1y@nasa.gov",
+    "password": "Eb3VVo",
+    "city_id": 40,
+    "sector": "Health Care",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Eaton Vance Enhanced Equity Income Fund II",
+    "cif": "3581228818412791",
+    "email": "chedgeman1z@about.com",
+    "password": "VTdjDRL19a",
+    "city_id": 42,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Cooper Companies, Inc. (The)",
+    "cif": "3542856019546195",
+    "email": "smanns20@wiley.com",
+    "password": "71ki0Ii",
+    "city_id": 2,
+    "sector": "Health Care",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Zimmer Biomet Holdings, Inc.",
+    "cif": "376247637400170",
+    "email": "julyatt21@discuz.net",
+    "password": "EfDKcMyjSVRV",
+    "city_id": 47,
+    "sector": "Health Care",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "NiSource, Inc",
+    "cif": "5602220356209598",
+    "email": "esummerlad22@oaic.gov.au",
+    "password": "V8yNCBjzJc",
+    "city_id": 46,
+    "sector": "Public Utilities",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Tetra Technologies, Inc.",
+    "cif": "3563671984520719",
+    "email": "sdyment23@wordpress.com",
+    "password": "GykCMttbg1",
+    "city_id": 24,
+    "sector": "Energy",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Hutchison China MediTech Limited",
+    "cif": "560221205839072817",
+    "email": "ghefforde24@unc.edu",
+    "password": "pfSmxWrw",
+    "city_id": 1,
+    "sector": "Health Care",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Rite Aid Corporation",
+    "cif": "374622658163737",
+    "email": "bpratte25@about.me",
+    "password": "hwSQoi",
+    "city_id": 22,
+    "sector": "Health Care",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Workhorse Group, Inc.",
+    "cif": "3556541684838753",
+    "email": "bgreschik26@hibu.com",
+    "password": "vCTjtp",
+    "city_id": 6,
+    "sector": "Capital Goods",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Twitter, Inc.",
+    "cif": "4903279815911482",
+    "email": "jgilham27@illinois.edu",
+    "password": "8hyeW1pFS2B",
+    "city_id": 7,
+    "sector": "Technology",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Gamco Investors, Inc.",
+    "cif": "3533572406316339",
+    "email": "roscollee28@accuweather.com",
+    "password": "DR2atDmR",
+    "city_id": 19,
+    "sector": "Finance",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Vanguard Russell 1000 Value ETF",
+    "cif": "6767787727256119",
+    "email": "afretwell29@shutterfly.com",
+    "password": "eIeSjL54WG",
+    "city_id": 23,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Cumberland Pharmaceuticals Inc.",
+    "cif": "675982583863315533",
+    "email": "tmingasson2a@amazon.com",
+    "password": "xIjuoTF",
+    "city_id": 22,
+    "sector": "Health Care",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Landcadia Holdings, Inc.",
+    "cif": "5020924607296058884",
+    "email": "wlegerwood2b@seesaa.net",
+    "password": "0N3pym",
+    "city_id": 33,
+    "sector": "Finance",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Energizer Holdings, Inc.",
+    "cif": "3530160093019045",
+    "email": "ebiddulph2c@house.gov",
+    "password": "uVQgeH",
+    "city_id": 30,
+    "sector": "Miscellaneous",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Aviat Networks, Inc.",
+    "cif": "5100146811912434",
+    "email": "nbiggadike2d@altervista.org",
+    "password": "qarsXhMub",
+    "city_id": 46,
+    "sector": "Technology",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Dominion Energy, Inc.",
+    "cif": "4664574752837",
+    "email": "mdeeny2e@yellowpages.com",
+    "password": "c9nuJQ",
+    "city_id": 7,
+    "sector": "Public Utilities",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "WisdomTree U.S. Quality Dividend Growth Fund",
+    "cif": "3589092154369235",
+    "email": "awetherburn2f@bing.com",
+    "password": "HH9GYtTd",
+    "city_id": 46,
+    "sector": "n/a",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Landcadia Holdings, Inc.",
+    "cif": "676764356369275069",
+    "email": "cfaunt2g@irs.gov",
+    "password": "Grn5qQ",
+    "city_id": 23,
+    "sector": "Finance",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Northwest Pipe Company",
+    "cif": "5500710968251338",
+    "email": "ldransfield2h@senate.gov",
+    "password": "YWeodp52t",
+    "city_id": 34,
+    "sector": "Basic Industries",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "AMAG Pharmaceuticals, Inc.",
+    "cif": "3548423790365990",
+    "email": "hcarle2i@hatena.ne.jp",
+    "password": "uCEInKvHpcq5",
+    "city_id": 45,
+    "sector": "Health Care",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Raytheon Company",
+    "cif": "6304802075503694590",
+    "email": "sscruton2j@fc2.com",
+    "password": "e8XH54n6Kv",
+    "city_id": 51,
+    "sector": "Capital Goods",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "CABCO Series 2004-101 Trust",
+    "cif": "3541370751608156",
+    "email": "dcunnah2k@dailymotion.com",
+    "password": "8SpdDPBc6rn",
+    "city_id": 5,
+    "sector": "Finance",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "FRP Holdings, Inc.",
+    "cif": "3585505898971085",
+    "email": "pdorrins2l@symantec.com",
+    "password": "fV60RZrzTe9",
+    "city_id": 8,
+    "sector": "Finance",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Echelon Corporation",
+    "cif": "5610185895143295",
+    "email": "ssimmonds2m@yellowpages.com",
+    "password": "KG7ROqI7V",
+    "city_id": 14,
+    "sector": "Technology",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Bank of South Carolina Corp.",
+    "cif": "3553208107540928",
+    "email": "ubraybrooks2n@prweb.com",
+    "password": "evMooTPG",
+    "city_id": 30,
+    "sector": "Finance",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Altra Industrial Motion Corp.",
+    "cif": "3562149503944513",
+    "email": "ytempest2o@oaic.gov.au",
+    "password": "xeXOkS",
+    "city_id": 29,
+    "sector": "Capital Goods",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "The Michaels Companies, Inc.",
+    "cif": "4911412093421615916",
+    "email": "ktitchen2p@sina.com.cn",
+    "password": "TiaUNkycnEb",
+    "city_id": 17,
+    "sector": "Consumer Services",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "QTS Realty Trust, Inc.",
+    "cif": "4175003279551480",
+    "email": "kmenhenitt2q@hatena.ne.jp",
+    "password": "3st2Pq33eJ",
+    "city_id": 1,
+    "sector": "Consumer Services",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  },
+  {
+    "name": "Select Energy Services, Inc.",
+    "cif": "6333822030976349912",
+    "email": "mcabena2r@blogger.com",
+    "password": "8tOgZJf6",
+    "city_id": 19,
+    "sector": "Energy",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+  }
 ]
