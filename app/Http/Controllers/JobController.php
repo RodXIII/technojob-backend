@@ -4,23 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Job;
 use App\JobWorker;
-use App\Company;
 use App\Worker;
+use Firebase\JWT\JWT;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Validator;
-use Firebase\JWT\JWT;
 
-class JobController extends Controller
-{
+class JobController extends Controller {
   /**
    * responds with all jobs order DESc.
    *
    * accept limit filter
    * -----------------------------------------------*/
-  public function getJobs($limit = 500)
-  {
+  public function getJobs($limit = 500) {
 
     // return Job::all();
     return Job::with('workers')->orderBy('created_at', 'DESC')
@@ -33,8 +30,7 @@ class JobController extends Controller
    *
    * accept limit filter
    * -----------------------------------------------*/
-  public function getTopJobs($limit = 500)
-  {
+  public function getTopJobs($limit = 500) {
     // return Job::all();
     $jobs = Job::with('workers', 'company')
       ->withCount('workers')
@@ -50,7 +46,7 @@ class JobController extends Controller
    *
    * accept limit, city and type filter
    * -----------------------------------------------*/
-  public function getFilteredJobs($limit, $city, $type)  //TODO 
+  public function getFilteredJobs($limit, $city, $type) //TODO
   {
     echo "$limit  $city  $type";
 
@@ -79,8 +75,7 @@ class JobController extends Controller
     return $jobs;
   }
 
-  public function searchJob(Request $request)
-  {
+  public function searchJob(Request $request) {
 
     try {
       $token = $_SERVER['HTTP_AUTHORIZATION'];
@@ -101,12 +96,7 @@ class JobController extends Controller
       }
 
       $type = $request->input('input');
-      //$type = $request->input('input');
       $city = $request->input('city');
-      //$types = explode(" ", $type);
-      // $results = [];
-      // //FOREACH
-      //foreach ($types as &$type) {
 
       $jobs = Job::with('company')
         ->when($city, function ($query, $city) {
@@ -134,7 +124,9 @@ class JobController extends Controller
       //$res = array_values(array_unique($results));
 
       //return $res;
+
       return $jobs;
+
     } catch (QueryException $e) {
 
       return \Response::json([
@@ -148,8 +140,7 @@ class JobController extends Controller
    * add and responds job created
    *
    * -----------------------------------------------*/
-  public function createJob(Request $request)
-  {
+  public function createJob(Request $request) {
 
     try {
       $token = $_SERVER['HTTP_AUTHORIZATION'];
@@ -173,7 +164,7 @@ class JobController extends Controller
       $rules = [
         'job_name' => 'required',
         'salary' => 'required',
-        'job_description' => 'required'
+        'job_description' => 'required',
       ];
 
       // Ejecutamos el validador, en caso de que falle devolvemos la respuesta
@@ -199,11 +190,10 @@ class JobController extends Controller
 
   /**
    * set job.active value to false
-   * 
-   * set workers status subscribed (not accepted) to 0 
+   *
+   * set workers status subscribed (not accepted) to 0
    * -----------------------------------------------*/
-  public function finalizeJob($jobId)
-  {
+  public function finalizeJob($jobId) {
 
     try {
       $token = $_SERVER['HTTP_AUTHORIZATION'];
@@ -243,7 +233,6 @@ class JobController extends Controller
         }
       }
 
-
       return \Response::json([
         'finalized' => true,
         'message' => '.. job offer finalized ..',
@@ -259,10 +248,9 @@ class JobController extends Controller
 
   /**
    * worker subscribes to a job
-   * 
+   *
    * -----------------------------------------------*/
-  public function subscribe($jobId)
-  {
+  public function subscribe($jobId) {
 
     try {
       $token = $_SERVER['HTTP_AUTHORIZATION'];
@@ -282,7 +270,6 @@ class JobController extends Controller
           'message' => '.. usertype invalid ..',
         ], 400); // 400 - bad request
       }
-
 
       $checkWorker = JobWorker::where(['job_id' => $jobId, 'worker_id' => $id])->first();
 
@@ -311,8 +298,7 @@ class JobController extends Controller
    * delete job and its subscriptors
    *
    * -----------------------------------------------*/
-  public function deleteJob($jobId)
-  {
+  public function deleteJob($jobId) {
 
     try {
       $token = $_SERVER['HTTP_AUTHORIZATION'];
@@ -340,7 +326,6 @@ class JobController extends Controller
           'message' => '.. unauthorized ..',
         ], 400); // 400 - bad request
       }
-
 
       $jobworkers = JobWorker::where('job_id', '=', $jobId)->get();
       foreach ($jobworkers as &$jobworker) {

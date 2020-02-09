@@ -24,6 +24,7 @@ class CompaniesSeeder extends Seeder
           'password' => $obj->password,
           'city_id' => $obj->city_id,
           'sector' => $obj->sector,
+          'description' => $obj->description,
         ));
       }
     }
