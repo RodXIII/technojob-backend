@@ -113,17 +113,9 @@ class JobController extends Controller {
               $query->where('name', 'LIKE', '%' . $type . '%');
             });
         })
+        ->withCount('workers')
         ->orderBy('created_at', 'DESC')
         ->get();
-
-      // foreach ($jobs as &$job) {
-      //   (array_push($results, $job));
-      // }
-      //}
-
-      //$res = array_values(array_unique($results));
-
-      //return $res;
 
       return $jobs;
 
@@ -338,6 +330,58 @@ class JobController extends Controller {
       return \Response::json([
         'finalized' => true,
         'message' => '.. job offer deleted ..',
+      ], 200);
+    } catch (QueryException $e) {
+
+      return \Response::json([
+        'created' => false,
+        'message' => '.. job no found..' . $e,
+      ], 500); // 500 - query error
+    }
+  }
+
+    /**
+   * modify job-worker status
+   *
+   * set workers status subscribed (not accepted) to 0
+   * -----------------------------------------------*/
+  public function editStatus(Request $request,$jobId) {
+
+    try {
+      $token = $_SERVER['HTTP_AUTHORIZATION'];
+
+      if (empty($token)) {
+        return \Response::json([
+          'message' => '.. no token ..',
+        ], 400); // 400 - bad request
+      }
+      $decode = JWT::decode($token, "misecretito", array('HS256'));
+
+      $usertype = $decode->data->usertype;
+      $id = $decode->data->id;
+
+      if ($usertype != 'company') {
+        return \Response::json([
+          'message' => '.. usertype invalid ..',
+        ], 400); // 400 - bad request
+      }
+
+      $job = Job::find($jobId);
+
+      if ($id != $job['company_id']) {
+        return \Response::json([
+          'message' => '.. unauthorized ..',
+        ], 400); // 400 - bad request
+      }
+
+      $status = $request->input('status');
+      $workerId = $request->input('workerId');
+
+      $job->workers()->updateExistingPivot($workerId,['status' => $status]);
+
+      return \Response::json([
+        'finalized' => true,
+        'message' => '.. job offer modified ..',
       ], 200);
     } catch (QueryException $e) {
 
