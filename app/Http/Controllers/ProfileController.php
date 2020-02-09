@@ -11,8 +11,10 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
-class ProfileController extends Controller {
-  public function getAll($usertype) {
+class ProfileController extends Controller
+{
+  public function getAll($usertype)
+  {
     if ($usertype === 'worker') {
       $users = Worker::all();
     } else if ($usertype === 'company') {
@@ -22,7 +24,8 @@ class ProfileController extends Controller {
     return $users;
   }
 
-  public function getMyProfile() {
+  public function getMyProfile()
+  {
 
     $token = $_SERVER['HTTP_AUTHORIZATION'];
 
@@ -48,7 +51,8 @@ class ProfileController extends Controller {
 
   }
 
-  public function getProfile($usertype, $id) {
+  public function getProfile($usertype, $id)
+  {
 
     if ($usertype === 'worker') {
       $user = Worker::with('jobs')->where('id', '=', $id)->first();
@@ -63,7 +67,8 @@ class ProfileController extends Controller {
 
   }
 
-  public function update(Request $request) {
+  public function update(Request $request)
+  {
     try {
       $token = $_SERVER['HTTP_AUTHORIZATION'];
 
@@ -124,12 +129,14 @@ class ProfileController extends Controller {
     }
   }
 
-  public function getImage($filename) {
+  public function getImage($filename)
+  {
     $file = Storage::disk('users')->get($filename);
     return new Response($file, 200);
   }
 
-  public function pass(Request $request) {
+  public function pass(Request $request)
+  {
     try {
       $token = $_SERVER['HTTP_AUTHORIZATION'];
 
@@ -185,6 +192,55 @@ class ProfileController extends Controller {
 
       return \Response::json([
         'message' => '.. DB error ..',
+      ], 500); // 500 - query error
+    }
+  }
+
+  public function searchWorker(Request $request)
+  {
+
+    try {
+      $token = $_SERVER['HTTP_AUTHORIZATION'];
+
+      if (empty($token)) {
+        return \Response::json([
+          'message' => '.. no token ..',
+        ], 400); // 400 - bad request
+      }
+      $decode = JWT::decode($token, "misecretito", array('HS256'));
+
+      $usertype = $decode->data->usertype;
+
+      if ($usertype != 'company') {
+        return \Response::json([
+          'message' => '.. usertype invalid ..',
+        ], 400); // 400 - bad request
+      }
+
+      $type = $request->input('input');
+      $city = $request->input('city');
+
+      $workers = Worker::when($city, function ($query, $city) {
+        $query->where('city_id', $city);
+      })
+        ->when($type, function ($query, $type) {     //"->when()" is used to allow null values on search
+          $query->where(function ($q) use ($type) {
+          // Nested OR condition
+          $q->where('about', 'LIKE', '%' . $type . '%')
+            ->orWhere('education', 'LIKE', '%' . $type . '%')
+            ->orWhere('skills', 'LIKE', '%' . $type . '%')
+            ->orWhere('experience', 'LIKE', '%' . $type . '%');
+        });
+      })
+        ->orderBy('created_at', 'DESC')
+        ->get();
+
+      return $workers;
+    } catch (QueryException $e) {
+
+      return \Response::json([
+        'created' => false,
+        'message' => '.. no workers ..' . $e,
       ], 500); // 500 - query error
     }
   }

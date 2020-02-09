@@ -35,6 +35,7 @@ Route::group(['middleware' => ['cors']], function () {
   Route::patch('/access/logout/{usertype}', 'AccessController@logout')->middleware('token');
 
   // Profiles
+  Route::post('/profiles/search', 'ProfileController@searchWorker')->middleware('token');
   Route::get('/profiles/{usertype}', 'ProfileController@getAll')->middleware('token');
   Route::get('/myprofile', 'ProfileController@getMyProfile')->middleware('token');
   Route::get('/profile/{usertype}/{id}', 'ProfileController@getProfile')->middleware('token');

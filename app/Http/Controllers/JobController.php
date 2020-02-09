@@ -340,7 +340,7 @@ class JobController extends Controller {
     }
   }
 
-    /**
+  /**
    * modify job-worker status
    *
    * set workers status subscribed (not accepted) to 0
@@ -393,13 +393,3 @@ class JobController extends Controller {
   }
 }
 
-// removeMe
-//AND  companies.city_id = 13", [1]);
-// $jobs = DB::select("SELECT *, companies-city_id FROM jobs, companies WHERE $filter", [1]);
-// $jobs = DB::select('SELECT * FROM workers WHERE id = ? AND name = ?', [1, 'camey']);
-// $jobs = DB::select('SELECT * FROM workers WHERE id = :id AND name = :name', ['id' => 1, 'name' => 'camey']);
-//select *, companies.city_id from jobs, companies where jobs.company_id = companies.id and companies.city_id = 13
-
-// $worker = Worker::find($id);
-// $job = Job::find($jobId);
-// $job->workers()->attach($worker->id);
