@@ -109,7 +109,7 @@ class ProfileController extends Controller
       $imgId = $user['id'];
       $image_name = "$usertype-$imgId";
       if ($image) {
-        //Guardamos en la caqrpeta storage(storage/app/users)
+        //Guardamos en la carpeta storage(storage/app/users)
         Storage::disk('users')->put($image_name, File::get($image));
         //seteo el nombre de la imagen en el objeto
         $user['url_img'] = $image_name;
@@ -129,10 +129,81 @@ class ProfileController extends Controller
     }
   }
 
-  public function getImage($filename)
+  public function setImage(Request $request)
   {
-    $file = Storage::disk('users')->get($filename);
-    return new Response($file, 200);
+    try {
+      $token = $_SERVER['HTTP_AUTHORIZATION'];
+
+      if (empty($token)) {
+        return \Response::json([
+          'message' => '.. no token ..',
+        ], 400); // 400 - bad request
+      }
+      $decode = JWT::decode($token, "misecretito", array('HS256'));
+
+      $usertype = $decode->data->usertype;
+
+      if ($usertype === 'worker') {
+        $user = Worker::where('token', '=', $token)->first();
+      } else if ($usertype === 'company') {
+        $user = Company::where('token', '=', $token)->first();
+      }
+
+      $image = $request->file('image');
+      $imgId = $user['id'];
+      $image_name = "$usertype-$imgId";
+      if ($image) {
+        //Guardamos en la carpeta storage(storage/app/users)
+        Storage::disk('users')->put($image_name, File::get($image));
+        //seteo el nombre de la imagen en el objeto
+        $user['url_img'] = $image_name;
+        $user->update();
+      }
+
+      return \Response::json([
+        'user' => $user,
+        'message' => '.. image modified ..',
+      ], 200); // 200 - request
+    } catch (QueryException $e) {
+
+      return \Response::json([
+        'created' => false,
+        'message' => '.. DB error ..',
+      ], 500); // 500 - query error
+    }
+  }
+
+  public function getImage()
+  {
+    try {
+      $token = $_SERVER['HTTP_AUTHORIZATION'];
+
+      if (empty($token)) {
+        return \Response::json([
+          'message' => '.. no token ..',
+        ], 400); // 400 - bad request
+      }
+      $decode = JWT::decode($token, "misecretito", array('HS256'));
+
+      $usertype = $decode->data->usertype;
+
+      if ($usertype === 'worker') {
+        $user = Worker::where('token', '=', $token)->first();
+      } else if ($usertype === 'company') {
+        $user = Company::where('token', '=', $token)->first();
+      }
+
+      $image_name = $user['url_img'];
+      $file = Storage::disk('users')->get($image_name);
+
+      return new Response($file, 200);
+    } catch (QueryException $e) {
+
+      return \Response::json([
+        'created' => false,
+        'message' => '.. DB error ..',
+      ], 500); // 500 - query error
+    }
   }
 
   public function pass(Request $request)
@@ -225,13 +296,13 @@ class ProfileController extends Controller
       })
         ->when($type, function ($query, $type) {     //"->when()" is used to allow null values on search
           $query->where(function ($q) use ($type) {
-          // Nested OR condition
-          $q->where('about', 'LIKE', '%' . $type . '%')
-            ->orWhere('education', 'LIKE', '%' . $type . '%')
-            ->orWhere('skills', 'LIKE', '%' . $type . '%')
-            ->orWhere('experience', 'LIKE', '%' . $type . '%');
-        });
-      })
+            // Nested OR condition
+            $q->where('about', 'LIKE', '%' . $type . '%')
+              ->orWhere('education', 'LIKE', '%' . $type . '%')
+              ->orWhere('skills', 'LIKE', '%' . $type . '%')
+              ->orWhere('experience', 'LIKE', '%' . $type . '%');
+          });
+        })
         ->orderBy('created_at', 'DESC')
         ->get();
 
