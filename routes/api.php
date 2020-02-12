@@ -41,8 +41,8 @@ Route::group(['middleware' => ['cors']], function () {
   Route::get('/profile/{usertype}/{id}', 'ProfileController@getProfile')->middleware('token');
   Route::patch('/myprofile/update', 'ProfileController@update')->middleware('token');
   Route::patch('/myprofile/pass', 'ProfileController@pass')->middleware('token');
-  Route::patch('/myprofile/img', 'ProfileController@setImage')->middleware('token');
-  Route::get('/myprofile/img', 'ProfileController@getImage')->middleware('token');
+  Route::post('/myprofile/img', 'ProfileController@setImage')->middleware('token');
+  Route::get('/myprofile/img/{image_name}', 'ProfileController@getImage');
 
   // Jobs
   Route::post('/jobs/search', 'JobController@searchJob');

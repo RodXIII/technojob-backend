@@ -11,10 +11,8 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
-class ProfileController extends Controller
-{
-  public function getAll($usertype)
-  {
+class ProfileController extends Controller {
+  public function getAll($usertype) {
     if ($usertype === 'worker') {
       $users = Worker::all();
     } else if ($usertype === 'company') {
@@ -24,8 +22,7 @@ class ProfileController extends Controller
     return $users;
   }
 
-  public function getMyProfile()
-  {
+  public function getMyProfile() {
 
     $token = $_SERVER['HTTP_AUTHORIZATION'];
 
@@ -51,8 +48,7 @@ class ProfileController extends Controller
 
   }
 
-  public function getProfile($usertype, $id)
-  {
+  public function getProfile($usertype, $id) {
 
     if ($usertype === 'worker') {
       $user = Worker::with('jobs')->where('id', '=', $id)->first();
@@ -67,8 +63,7 @@ class ProfileController extends Controller
 
   }
 
-  public function update(Request $request)
-  {
+  public function update(Request $request) {
     try {
       $token = $_SERVER['HTTP_AUTHORIZATION'];
 
@@ -105,17 +100,6 @@ class ProfileController extends Controller
       $input = $request->all();
       $user->fill($input)->save();
 
-      $image = $request->file('url_img');
-      $imgId = $user['id'];
-      $image_name = "$usertype-$imgId";
-      if ($image) {
-        //Guardamos en la carpeta storage(storage/app/users)
-        Storage::disk('users')->put($image_name, File::get($image));
-        //seteo el nombre de la imagen en el objeto
-        $user['url_img'] = $image_name;
-        $user->update();
-      }
-
       return \Response::json([
         'user' => $user,
         'message' => '.. profile modified ..',
@@ -129,8 +113,7 @@ class ProfileController extends Controller
     }
   }
 
-  public function setImage(Request $request)
-  {
+  public function setImage(Request $request) {
     try {
       $token = $_SERVER['HTTP_AUTHORIZATION'];
 
@@ -158,45 +141,17 @@ class ProfileController extends Controller
         //seteo el nombre de la imagen en el objeto
         $user['url_img'] = $image_name;
         $user->update();
-      }
 
-      return \Response::json([
-        'user' => $user,
-        'message' => '.. image modified ..',
-      ], 200); // 200 - request
-    } catch (QueryException $e) {
-
-      return \Response::json([
-        'created' => false,
-        'message' => '.. DB error ..',
-      ], 500); // 500 - query error
-    }
-  }
-
-  public function getImage()
-  {
-    try {
-      $token = $_SERVER['HTTP_AUTHORIZATION'];
-
-      if (empty($token)) {
         return \Response::json([
-          'message' => '.. no token ..',
-        ], 400); // 400 - bad request
-      }
-      $decode = JWT::decode($token, "misecretito", array('HS256'));
-
-      $usertype = $decode->data->usertype;
-
-      if ($usertype === 'worker') {
-        $user = Worker::where('token', '=', $token)->first();
-      } else if ($usertype === 'company') {
-        $user = Company::where('token', '=', $token)->first();
+          'user' => $user,
+          'message' => '.. image modified ..',
+        ], 200); // 200 - request
       }
 
-      $image_name = $user['url_img'];
-      $file = Storage::disk('users')->get($image_name);
+      return \Response::json([
+        'message' => '.. image no modified ..',
+      ], 400); // 400 - bad request
 
-      return new Response($file, 200);
     } catch (QueryException $e) {
 
       return \Response::json([
@@ -206,8 +161,21 @@ class ProfileController extends Controller
     }
   }
 
-  public function pass(Request $request)
-  {
+  public function getImage($image_name) {
+    try {
+      $file = Storage::get('users/' . $image_name);
+      return response($file, 200)->header('Content-Type', 'image');
+
+    } catch (Exception $e) {
+
+      return \Response::json([
+        'created' => false,
+        'message' => '.. img fail ..',
+      ], 500); // 500 - query error
+    }
+  }
+
+  public function pass(Request $request) {
     try {
       $token = $_SERVER['HTTP_AUTHORIZATION'];
 
@@ -236,7 +204,7 @@ class ProfileController extends Controller
       if ($validator->fails()) {
 
         return \Response::json([
-          'message' => $validator->errors()->all()
+          'message' => $validator->errors()->all(),
         ], 400); // 400 - bad request
       }
 
@@ -251,7 +219,7 @@ class ProfileController extends Controller
 
         return \Response::json([
           'user' => $user,
-          'message' => '.. change successful ..'
+          'message' => '.. change successful ..',
         ], 200); // 200 - change successful
       }
 
@@ -267,8 +235,7 @@ class ProfileController extends Controller
     }
   }
 
-  public function searchWorker(Request $request)
-  {
+  public function searchWorker(Request $request) {
 
     try {
       $token = $_SERVER['HTTP_AUTHORIZATION'];
@@ -294,7 +261,7 @@ class ProfileController extends Controller
       $workers = Worker::when($city, function ($query, $city) {
         $query->where('city_id', $city);
       })
-        ->when($type, function ($query, $type) {     //"->when()" is used to allow null values on search
+        ->when($type, function ($query, $type) { //"->when()" is used to allow null values on search
           $query->where(function ($q) use ($type) {
             // Nested OR condition
             $q->where('about', 'LIKE', '%' . $type . '%')
