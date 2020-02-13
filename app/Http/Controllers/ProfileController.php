@@ -134,7 +134,9 @@ class ProfileController extends Controller {
 
       $image = $request->file('image');
       $imgId = $user['id'];
-      $image_name = "$usertype-$imgId";
+
+      $now = date_create('now')->format('YmdHis');
+      $image_name = "$usertype-$imgId-$now";
       if ($image) {
         //Guardamos en la carpeta storage(storage/app/users)
         Storage::disk('users')->put($image_name, File::get($image));
